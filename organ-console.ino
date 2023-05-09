@@ -81,6 +81,8 @@ bool pipesBuffer[NUM_PIPES][128] = {}; // Buffer for the newly active pipes
 bool stops[MAX_STOPS + 1] = {}; // Active stops
 bool stopsBuffer[MAX_STOPS + 1] = {}; // Buffer for the newly active stops
 
+bool shouldUpdatePipes = false;
+
 // --------------------------------------------------
 
 // This is the function that maps the keyboards + stops to the organ pipes.
@@ -202,7 +204,7 @@ void clearPipesBuffer() {
 }
 
 // Sets the organ pipe in the buffer
-void setBufferPipe(byte channel, byte pitch) {
+void setBufferPipe(byte channel, int pitch) {
   if (pitch >= 0 && pitch <= 127) {
     // Serial.print("setBufferPipe ");
     // Serial.print(channel);
@@ -267,7 +269,7 @@ void setKey(byte channel, byte pitch, bool on) {
   // Serial.println(pitch);
   if (channel >= KEYBOARDS_CHANNEL_MIN && channel <= KEYBOARDS_CHANNEL_MAX) {
     keys[channel - KEYBOARDS_CHANNEL_MIN][pitch] = on;
-    updatePipes();
+    shouldUpdatePipes = true;
   }
 }
 
@@ -306,7 +308,7 @@ void refreshStops() {
 
   // Update pipes statuses if the stops settings have changed
   if (haveStopsChanged) {
-    updatePipes();
+    shouldUpdatePipes = true;
   }
 }
 
@@ -366,6 +368,8 @@ void setup() {
   pinMode(SwellToPedal, INPUT);
   pinMode(GreatToPedal, INPUT);
 
+  shouldUpdatePipes = false;
+
   // Keep calm and
   panic();
 
@@ -378,6 +382,17 @@ void setup() {
 //------------------------------------------------
 
 void loop() {
-  MIDI.read();
+  // Update stop statuses
   refreshStops();
+
+  // Process all the incoming MIDI messages in the serial buffer
+  while (MIDI.getTransport() -> available() != 0) {
+    MIDI.read();
+  }
+
+  // Update the pipes if some changes have been received
+  if (shouldUpdatePipes) {
+    shouldUpdatePipes = false;
+    updatePipes();
+  }
 }
