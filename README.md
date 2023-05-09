@@ -39,7 +39,7 @@ Every time a key or a stop on/off status has changed, the buffers are updated ac
 
 The buffer for keys is the `keys` boolean array (one row per channel) and the buffer for the stops is.... `stops`. true when key/stop is on, false when off.
 
-The `keys` buffer update is handled by the `setKey()` function (which is called by `handleMidiNoteOn()` and `handleMidiNoteOff()` by the MIDI library) and the `stops` buffer is updated by `refreshStops()` (the `stopsBuffer` is a temporary array used only within `refreshStops()` to compute the differences since these are not triggered via MIDI events such as CCs)
+The `keys` buffer update is handled by the `setKey()` function (which is called by `handleMidiNoteOn()` and `handleMidiNoteOff()` by the MIDI library) and the `stops` buffer is updated by `refreshStops()` (the `newStops` is a temporary array used only within `refreshStops()` to compute the differences since these are not triggered via MIDI events such as CCs)
 
 If any change was detected in the `keys` or the `stops` buffer, the `shouldUpdatePipes` global variable is set to `true`.
 
@@ -55,17 +55,17 @@ When a change was detected, the `shouldUpdatePipes` is reset to `false`.
 
 The big ass `updatePipes()` function is then called.
 
-The new pipes buffer is computed using the temporary `pipesBuffer` array that is first cleared (all set to `false`) by `clearPipesBuffer()`.
+The new pipes buffer is computed using the temporary `newPipes` array that is first cleared (all set to `false`) by `clearNewPipesBuffer()`.
 
 #### Step 3
 
 For each keyboard key that is on, we determine which pipe(s) should be on. This is made in the `setBufferPipeForKey()` function based on the key pitch and the keyboard (MIDI channel) it comes from (that's the code you wrote initially in the note on handler).
 
-The `setBufferPipe()` is called to flag a pipe as "on" in the temporary `pipesBuffer` by passing its pitch and MIDI channel. The `setBufferPipe()` makes sure that the pitch is between 0 and 127 because of the stops that can transpose out of the MIDI specs.
+The `setNewBufferPipe()` is called to flag a pipe as "on" in the temporary `newPipes` by passing its pitch and MIDI channel. The `setNewBufferPipe()` makes sure that the pitch is between 0 and 127 because of the stops that can transpose out of the MIDI specs.
 
 #### Step 4
 
-Now that we have the new pipes statuses in `pipesBuffer`, it's compared to the current `pipes` buffer. The appropriate MIDI note on/note off event is sent using the `sendNoteEvent()` function when a difference is detected and `pipes` is updated to reflect `pipesBuffer`.
+Now that we have the new pipes statuses in `newPipes`, it's compared to the current `pipes` buffer. The appropriate MIDI note on/note off event is sent using the `sendNoteEvent()` function when a difference is detected and `pipes` is updated to reflect `newPipes`.
 
 The `sendNoteEvent()` sends the actual Note on / note of events using the MIDI library. Since sending MIDI data is a blocking operation that can take several ms, we also process the MIDI in data as we do in the main `loop()` so we don't have MIDI in message stacking up in the input buffer and prevent losing MIDI messages.
 
