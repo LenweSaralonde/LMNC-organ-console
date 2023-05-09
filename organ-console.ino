@@ -239,12 +239,16 @@ void updatePipes() {
   for (int channel = PIPES_CHANNEL_MIN; channel <= PIPES_CHANNEL_MAX; channel++) {
     channelIndex = channel - PIPES_CHANNEL_MIN;
     for (int pitch = 0; pitch < 128; pitch++) {
-      if (pipesBuffer[channelIndex][pitch] && !pipes[channelIndex][pitch]) {
-        sendNoteEvent(channel, pitch, true);
-        pipes[channelIndex][pitch] = true;
-      } else if (!pipesBuffer[channelIndex][pitch] && pipes[channelIndex][pitch]) {
-        sendNoteEvent(channel, pitch, false);
-        pipes[channelIndex][pitch] = false;
+      bool isPipeOn = pipesBuffer[channelIndex][pitch];
+      // Pipe status has changed
+      if (isPipeOn != pipes[channelIndex][pitch]) {
+        pipes[channelIndex][pitch] = isPipeOn;
+        // Send note event to reflect the new pipe status
+        sendNoteEvent(channel, pitch, isPipeOn);
+        // Perform one MIDI read in parallel for the next iteration
+        // to prevent the input buffer from overrunning in case
+        // new events have arrived during the process.
+        MIDI.read();
       }
     }
   }
@@ -374,7 +378,6 @@ void setup() {
   panic();
 
   // TODO: ▼▼▼ remove these lines ▼▼▼
-  // refreshStops(); // Initialize stops state
   // handleMidiNoteOn(3, 60, 127); // C4
   // handleMidiNoteOn(3, 72, 127); // C5
   // TODO: ▲▲▲ remove these lines ▲▲▲
