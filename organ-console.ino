@@ -4,8 +4,6 @@
 
 #include <MIDI.h>
 
-MIDI_CREATE_DEFAULT_INSTANCE();
-
 // MIDI channels are indexed from 0 to 15.
 // MIDI channels for pipes and keyboards must be successive.
 
@@ -30,41 +28,41 @@ const byte PEDAL_CHANNEL = 0; // Pedal keyboard MIDI channel
 
 // Stops pins
 
-const int MAX_STOPS = 20; // Maximum number of stops
+const byte MAX_STOPS = 20; // Maximum number of stops
 
-const int SwellOpenDiapason8 = 7; // Swell Stop Open Diapason 8
-const int SwellStoppedDiapason8 = 6; // Swell Stop Stopped Diapason 8
-const int SwellPrincipal4 = 5; // Swell Stop Principal 4
-const int SwellFlute4 = 4; // Swell Stop Principal 4
-const int SwellFifteenth2 = 3; // Swell Stop Fifteenth 2
-const int SwellTwelfth22thirds = 2; // Swell Stop twelfth 2 2/3
+const byte SwellOpenDiapason8 = 7; // Swell Stop Open Diapason 8
+const byte SwellStoppedDiapason8 = 6; // Swell Stop Stopped Diapason 8
+const byte SwellPrincipal4 = 5; // Swell Stop Principal 4
+const byte SwellFlute4 = 4; // Swell Stop Principal 4
+const byte SwellFifteenth2 = 3; // Swell Stop Fifteenth 2
+const byte SwellTwelfth22thirds = 2; // Swell Stop twelfth 2 2/3
 
-const int GreatOpenDiapason8 = 15; // Great Stop Open Diapason 8
-const int GreatLieblich8 = 14; // Great Stop Lieblich 8
-const int GreatSalicional8 = 13; // Great Stop Salicional 8 NEED TO REMOVE ARDUINO LED TO MAKE THIS WORK
-const int GreatGemsHorn4 = 12; // Great Stop GemsHorn 4 dont know yet
-const int GreatSalicet4 = 11; // Great Stop Salicet 4
-const int GreatNazard22thirds = 10; // Great Stop Nazard 2 2/3
-const int GreatHorn8 = 9; // Great Stop Horn 8
-const int GreatClarion4 = 8; // Great Stop Clarion 4
+const byte GreatOpenDiapason8 = 15; // Great Stop Open Diapason 8
+const byte GreatLieblich8 = 14; // Great Stop Lieblich 8
+const byte GreatSalicional8 = 13; // Great Stop Salicional 8 NEED TO REMOVE ARDUINO LED TO MAKE THIS WORK
+const byte GreatGemsHorn4 = 12; // Great Stop GemsHorn 4 dont know yet
+const byte GreatSalicet4 = 11; // Great Stop Salicet 4
+const byte GreatNazard22thirds = 10; // Great Stop Nazard 2 2/3
+const byte GreatHorn8 = 9; // Great Stop Horn 8
+const byte GreatClarion4 = 8; // Great Stop Clarion 4
 
-const int PedalBassFlute8 = 20; // Pedal BassFlute 8
-const int PedalBourdon16 = 19; // Pedal Bourdon 16
+const byte PedalBassFlute8 = 20; // Pedal BassFlute 8
+const byte PedalBourdon16 = 19; // Pedal Bourdon 16
 
-const int SwellToGreat = 18;
-const int SwellToPedal = 17;
-const int GreatToPedal = 16;
+const byte SwellToGreat = 18;
+const byte SwellToPedal = 17;
+const byte GreatToPedal = 16;
 
 // Transpose stuff
 
-const int Octave = 12;
-const int TwoOctave = 24;
-const int Twelfth = 31;
+const byte Octave = 12;
+const byte TwoOctave = 24;
+const byte Twelfth = 31;
 
 // Status buffers
 
-const int NUM_KEYBOARDS = KEYBOARDS_CHANNEL_MAX - KEYBOARDS_CHANNEL_MIN + 1;
-const int NUM_PIPES = PIPES_CHANNEL_MAX - PIPES_CHANNEL_MIN + 1;
+const byte NUM_KEYBOARDS = KEYBOARDS_CHANNEL_MAX - KEYBOARDS_CHANNEL_MIN + 1;
+const byte NUM_PIPES = PIPES_CHANNEL_MAX - PIPES_CHANNEL_MIN + 1;
 
 bool keys[NUM_KEYBOARDS][128] = {}; // Active keys buffer
 bool pipes[NUM_PIPES][128] = {}; // Active pipes buffer
@@ -73,6 +71,12 @@ bool stops[MAX_STOPS + 1] = {}; // Active stops buffer
 bool newStops[MAX_STOPS + 1] = {}; // Newly active stops buffer
 
 bool shouldUpdatePipes = false; // Set to true when the keys/stops configuration has changed and the pipes need to be recomputed
+
+bool panicButtonState = false;
+
+// Create MIDI Library singleton instance
+
+MIDI_CREATE_DEFAULT_INSTANCE();
 
 /**
  * Map a keyboard key to the organ pipes, depending on the stops configuration.
@@ -192,8 +196,8 @@ void setBufferPipeForKey(byte channel, byte pitch) {
  * Clear the newly active pipes buffer.
  */
 void clearNewPipesBuffer() {
-  for (int pipeIndex = 0; pipeIndex < NUM_PIPES; pipeIndex++) {
-    for (int pitch = 0; pitch < 128; pitch++) {
+  for (byte pipeIndex = 0; pipeIndex < NUM_PIPES; pipeIndex++) {
+    for (byte pitch = 0; pitch < 128; pitch++) {
       newPipes[pipeIndex][pitch] = false;
     }
   }
@@ -219,9 +223,9 @@ void updatePipes() {
 
   // Compute the newly active pipes buffer based on the active keys and stops
   clearNewPipesBuffer();
-  for (int channel = KEYBOARDS_CHANNEL_MIN; channel <= KEYBOARDS_CHANNEL_MAX; channel++) {
+  for (byte channel = KEYBOARDS_CHANNEL_MIN; channel <= KEYBOARDS_CHANNEL_MAX; channel++) {
     channelIndex = channel - KEYBOARDS_CHANNEL_MIN;
-    for (int pitch = 0; pitch < 128; pitch++) {
+    for (byte pitch = 0; pitch < 128; pitch++) {
       if (keys[channelIndex][pitch]) {
         setBufferPipeForKey(channel, pitch);
       }
@@ -229,9 +233,9 @@ void updatePipes() {
   }
 
   // Compare the new pipes buffer with the current one and send MIDI note events for every difference
-  for (int channel = PIPES_CHANNEL_MIN; channel <= PIPES_CHANNEL_MAX; channel++) {
+  for (byte channel = PIPES_CHANNEL_MIN; channel <= PIPES_CHANNEL_MAX; channel++) {
     channelIndex = channel - PIPES_CHANNEL_MIN;
-    for (int pitch = 0; pitch < 128; pitch++) {
+    for (byte pitch = 0; pitch < 128; pitch++) {
       bool isPipeOn = newPipes[channelIndex][pitch];
       // Pipe status has changed
       if (isPipeOn != pipes[channelIndex][pitch]) {
@@ -253,8 +257,8 @@ void updatePipes() {
  * Send a MIDI note off event to all the organ pipes.
  */
 void panic() {
-  for (int channel = PIPES_CHANNEL_MIN; channel <= PIPES_CHANNEL_MAX; channel++) {
-    for (int pitch = 0; pitch < 128; pitch++) {
+  for (byte channel = PIPES_CHANNEL_MIN; channel <= PIPES_CHANNEL_MAX; channel++) {
+    for (byte pitch = 0; pitch < 128; pitch++) {
       sendNoteEvent(channel, pitch, false);
       pipes[channel - PIPES_CHANNEL_MIN][pitch] = false;
     }
@@ -303,7 +307,7 @@ void refreshStops() {
 
   // Compare new stop statuses with the current ones
   bool haveStopsChanged = false;
-  for (int stop = 0; stop <= MAX_STOPS; stop++) {
+  for (byte stop = 0; stop <= MAX_STOPS; stop++) {
     if (newStops[stop] != stops[stop]) {
       haveStopsChanged = true;
       stops[stop] = newStops[stop];
