@@ -245,10 +245,11 @@ void updatePipes() {
         pipes[channelIndex][pitch] = isPipeOn;
         // Send note event to reflect the new pipe status
         sendNoteEvent(channel, pitch, isPipeOn);
-        // Perform one MIDI read in parallel for the next iteration
-        // to prevent the input buffer from overrunning in case
-        // new events have arrived during the process.
-        MIDI.read();
+        // Process the MIDI in messages that have arrived during the process
+        // to prevent the input buffer from overrunning.
+        while (MIDI.getTransport() -> available() != 0) {
+          MIDI.read();
+        }
       }
     }
   }
