@@ -302,7 +302,7 @@ void refreshStops() {
   newStops[GreatHorn8] = digitalRead(GreatHorn8) == HIGH;
   newStops[GreatClarion4] = digitalRead(GreatClarion4) == HIGH;
 
-  newStops[PedalBassFlute8] = analogRead(PedalBassFlute8) > 200;
+  newStops[PedalBassFlute8] = digitalRead(PedalBassFlute8) == HIGH;
   newStops[PedalBourdon16] = digitalRead(PedalBourdon16) == HIGH;
 
   // Compare new stop statuses with the current ones
