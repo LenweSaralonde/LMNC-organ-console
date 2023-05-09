@@ -53,6 +53,10 @@ const byte SwellToGreat = 18;
 const byte SwellToPedal = 17;
 const byte GreatToPedal = 16;
 
+// Panic button pin
+
+const byte PanicButton = 21;
+
 // Transpose stuff
 
 const byte Octave = 12;
@@ -321,6 +325,33 @@ void refreshStops() {
 }
 
 /**
+ * Handle the panic button.
+ * Reset all buffers and send MIDI panic to the pipes when the button is released.
+ */
+void handlePanicButton() {
+  bool newPanicButtonState = digitalRead(PanicButton) == HIGH;
+
+  if (!newPanicButtonState && panicButtonState) {
+    // Clear keys buffer
+    for (byte keyboardIndex = 0; keyboardIndex < NUM_KEYBOARDS; keyboardIndex++) {
+      for (byte pitch = 0; pitch < 128; pitch++) {
+        keys[keyboardIndex][pitch] = false;
+      }
+    }
+
+    // Clear stops buffer
+    for (byte stop = 0; stop <= MAX_STOPS; stop++) {
+      stops[stop] = false;
+    }
+
+    // MIDI panic (also clears pipes buffer)
+    panic();
+  }
+
+  panicButtonState = newPanicButtonState;
+}
+
+/**
  * Received MIDI note on handler.
  * @param channel Keyboard MIDI channel (1 - 16)
  * @param pitch MIDI key (0 - 127)
@@ -387,6 +418,8 @@ void setup() {
   pinMode(SwellToPedal, INPUT);
   pinMode(GreatToPedal, INPUT);
 
+  pinMode(PanicButton, INPUT);
+
   shouldUpdatePipes = false;
 
   // Keep calm and
@@ -397,6 +430,9 @@ void setup() {
  * Main loop.
  */
 void loop() {
+  // Panic button
+  handlePanicButton();
+
   // Update stop statuses
   refreshStops();
 
