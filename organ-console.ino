@@ -451,13 +451,20 @@ void readAllMIDI() {
 }
 
 /**
- * Main setup function.
+ * Initialize MIDI
  */
-void setup() {
+void initMIDI() {
   MIDI.setHandleNoteOn(handleMidiNoteOn);
   MIDI.setHandleNoteOff(handleMidiNoteOff);
   MIDI.begin(MIDI_CHANNEL_OMNI);
   MIDI.turnThruOff();
+}
+
+/**
+ * Main setup function.
+ */
+void setup() {
+  initMIDI();
 
   pinMode(PIN_SwellOpenDiapason8, INPUT);
   pinMode(PIN_SwellStoppedDiapason8, INPUT);
