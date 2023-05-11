@@ -296,9 +296,7 @@ void updatePipes() {
         // Process the MIDI in messages that have arrived during the note sending
         // to prevent the input buffer from overrunning because sendNoteEvent
         // is a blocking operation.
-        while (MIDI.getTransport() -> available() != 0) {
-          MIDI.read();
-        }
+        readAllMIDI();
       }
     }
   }
@@ -444,6 +442,15 @@ void sendNoteEvent(byte channel, byte pitch, bool on) {
 }
 
 /**
+ * Process all the incoming MIDI messages in the buffer.
+ */
+void readAllMIDI() {
+  while (MIDI.getTransport() -> available() != 0) {
+    MIDI.read();
+  }
+}
+
+/**
  * Main setup function.
  */
 void setup() {
@@ -493,10 +500,8 @@ void loop() {
   // Update stop statuses
   refreshStops();
 
-  // Process all the incoming MIDI messages in the serial buffer
-  while (MIDI.getTransport() -> available() != 0) {
-    MIDI.read();
-  }
+  // Read incoming MIDI messages
+  readAllMIDI();
 
   // Update the pipes if some changes have been received
   if (shouldUpdatePipes) {
