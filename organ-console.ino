@@ -87,8 +87,8 @@ const byte GreatToPedal = 0x04;
 // Transpose stuff
 
 const byte Octave = 12;
-const byte TwoOctave = 24;
-const byte Twelfth = 31;
+const byte TwoOctave = 2 * Octave;
+const byte Twelfth = TwoOctave + 7;
 
 ////////////////////////////// GLOBALS //////////////////////////////
 
