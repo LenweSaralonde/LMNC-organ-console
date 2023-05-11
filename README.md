@@ -59,7 +59,7 @@ The new pipes buffer is computed using the temporary `newPipes` array that is fi
 
 #### Step 3
 
-For each keyboard key that is on, we determine which pipe(s) should be on. This is made in the `setBufferPipeForKey()` function based on the key pitch and the keyboard (MIDI channel) it comes from (that's the code you wrote initially in the note on handler).
+For each keyboard key that is on, we determine which pipe(s) should be on. This is made in the `setBufferPipesForKey()` function based on the key pitch and the keyboard (MIDI channel) it comes from (that's the code you wrote initially in the note on handler).
 
 The `setNewBufferPipe()` is called to flag a pipe as "on" in the temporary `newPipes` by passing its pitch and MIDI channel. The `setNewBufferPipe()` makes sure that the pitch is between 0 and 127 because of the stops that can transpose out of the MIDI specs.
 
