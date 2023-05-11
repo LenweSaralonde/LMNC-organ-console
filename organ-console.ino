@@ -127,26 +127,26 @@ MIDI_CREATE_DEFAULT_INSTANCE();
  * @param channel Keyboard MIDI channel (KEYBOARDS_CHANNEL_MIN - KEYBOARDS_CHANNEL_MAX)
  * @param pitch MIDI key (0 - 127)
  */
-void setBufferPipeForKey(byte channel, byte pitch) {
+void setBufferPipesForKey(byte channel, byte pitch) {
   switch (channel) {
   case CHANNEL_KEYBOARD_SWELL:
-    setSwellPipes(pitch);
+    setSwellBufferPipesForKey(pitch);
     break;
 
   case CHANNEL_KEYBOARD_GREAT:
-    setGreatPipes(pitch);
+    setGreatBufferPipesForKey(pitch);
     if (couplerStops & SwellToGreat) {
-      setSwellPipes(pitch);
+      setSwellBufferPipesForKey(pitch);
     }
     break;
 
   case CHANNEL_KEYBOARD_PEDAL:
-    setPedalPipes(pitch);
+    setPedalBufferPipesForKey(pitch);
     if (couplerStops & SwellToPedal) {
-      setSwellPipes(pitch);
+      setSwellBufferPipesForKey(pitch);
     }
     if (couplerStops & GreatToPedal) {
-      setGreatPipes(pitch);
+      setGreatBufferPipesForKey(pitch);
     }
     break;
 
@@ -160,7 +160,7 @@ void setBufferPipeForKey(byte channel, byte pitch) {
  * Set the organ pipes in the new buffer for Swell stops.
  * @param pitch MIDI key (0 - 127)
  */
-void setSwellPipes(byte pitch) {
+void setSwellBufferPipesForKey(byte pitch) {
   // Swell stop to Principal pipes
   if (swellStops & SwellOpenDiapason8) {
     setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch);
@@ -192,7 +192,7 @@ void setSwellPipes(byte pitch) {
  * Set the organ pipes in the new buffer for Great stops.
  * @param pitch MIDI key (0 - 127)
  */
-void setGreatPipes(byte pitch) {
+void setGreatBufferPipesForKey(byte pitch) {
   // Great stop to Principal pipes
   if (greatStops & GreatOpenDiapason8) {
     setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch);
@@ -231,7 +231,7 @@ void setGreatPipes(byte pitch) {
  * Set the organ pipes in the new buffer for Pedal stops.
  * @param pitch MIDI key (0 - 127)
  */
-void setPedalPipes(byte pitch) {
+void setPedalBufferPipesForKey(byte pitch) {
   // Pedal stop to String pipes
   if (pedalStops & PedalBassFlute8) {
     setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch);
@@ -278,7 +278,7 @@ void updatePipes() {
     channelIndex = channel - MIN_CHANNEL_KEYBOARDS;
     for (byte pitch = 0; pitch < 128; pitch++) {
       if (keys[channelIndex][pitch]) {
-        setBufferPipeForKey(channel, pitch);
+        setBufferPipesForKey(channel, pitch);
       }
     }
   }
