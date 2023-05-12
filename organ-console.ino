@@ -103,7 +103,7 @@ byte couplerStops = 0x00;
 
 bool panicButtonState = false;
 
-// Status buffers
+// State buffers
 
 const byte NUM_KEYBOARDS = MAX_CHANNEL_KEYBOARDS - MIN_CHANNEL_KEYBOARDS + 1;
 const byte NUM_PIPES = MAX_CHANNEL_PIPES - MIN_CHANNEL_PIPES + 1;
@@ -257,9 +257,9 @@ void clearNewPipesBuffer() {
 /**
  * Set a newly active pipe.
  * @param channel Pipe MIDI channel (MIN_CHANNEL_PIPES - MAX_CHANNEL_PIPES)
- * @param pitch MIDI key (0 - 255) Values above 127 are ignored.
+ * @param pitch MIDI key (0 - 127) Out of range values are ignored.
  */
-void setNewBufferPipe(byte channel, byte pitch) {
+void setNewBufferPipe(byte channel, int pitch) {
   if (pitch >= 0 && pitch <= 127) {
     newPipes[channel - MIN_CHANNEL_PIPES][pitch] = true;
   }
@@ -283,15 +283,15 @@ void updatePipes() {
     }
   }
 
-  // Compare the new pipes buffer with the current one and send MIDI note events for every difference
+  // Compare the new pipes buffer with the current one and send MIDI note events for each difference
   for (byte channel = MIN_CHANNEL_PIPES; channel <= MAX_CHANNEL_PIPES; channel++) {
     channelIndex = channel - MIN_CHANNEL_PIPES;
     for (byte pitch = 0; pitch < 128; pitch++) {
       bool isPipeOn = newPipes[channelIndex][pitch];
-      // Pipe status has changed
+      // Pipe state has changed
       if (isPipeOn != pipes[channelIndex][pitch]) {
         pipes[channelIndex][pitch] = isPipeOn;
-        // Send note event to reflect the new pipe status
+        // Send note event to reflect the new pipe state
         sendNoteEvent(channel, pitch, isPipeOn);
         // Process the MIDI in messages that have arrived during the note sending
         // to prevent the input buffer from overrunning because sendNoteEvent
@@ -315,7 +315,7 @@ void panic() {
 }
 
 /**
- * Set the status of a keyboard key
+ * Set the state of a keyboard key
  * @param channel Keyboard MIDI channel (0 - 15)
  * @param pitch MIDI key (0 - 127)
  * @param on True when the key is down
@@ -386,7 +386,7 @@ void handlePanicButton() {
   bool newPanicButtonState = digitalRead(PIN_PanicButton) == HIGH;
 
   if (!newPanicButtonState && panicButtonState) {
-    // Clear keys buffer
+    // Clear keys buffers
     for (byte keyboardIndex = 0; keyboardIndex < NUM_KEYBOARDS; keyboardIndex++) {
       for (byte pitch = 0; pitch < 128; pitch++) {
         keys[keyboardIndex][pitch] = false;
@@ -504,7 +504,7 @@ void loop() {
   // Panic button
   handlePanicButton();
 
-  // Update stop statuses
+  // Update stop states
   refreshStops();
 
   // Read incoming MIDI messages
