@@ -103,15 +103,14 @@ byte couplerStops = 0x00;
 
 bool panicButtonState = false;
 
-// State buffers
-// Each buffer is made of 16 8-bit chunks to store the state for all the 128 possible MIDI keys
+// Status buffers
 
 const byte NUM_KEYBOARDS = MAX_CHANNEL_KEYBOARDS - MIN_CHANNEL_KEYBOARDS + 1;
 const byte NUM_PIPES = MAX_CHANNEL_PIPES - MIN_CHANNEL_PIPES + 1;
 
-byte keys[NUM_KEYBOARDS][16] = {}; // Active keys buffers
-byte pipes[NUM_PIPES][16] = {}; // Active pipes buffers
-byte newPipes[NUM_PIPES][16] = {}; // Newly active pipes buffers
+bool keys[NUM_KEYBOARDS][128] = {}; // Active keys buffer
+bool pipes[NUM_PIPES][128] = {}; // Active pipes buffer
+bool newPipes[NUM_PIPES][128] = {}; // Newly active pipes buffer
 
 // Set to true when the keys/stops configuration has changed and the pipes need to be recomputed
 
@@ -245,55 +244,24 @@ void setPedalBufferPipesForKey(byte pitch) {
 }
 
 /**
- * Write bit in pitch buffer.
- * @param buffer The pitch buffer
- * @param pitch MIDI key (0 - 127)
- * @param on New bit value
+ * Clear the newly active pipes buffer.
  */
-void writeBufferBit(byte( & buffer)[16], byte pitch, bool on) {
-  byte chunkIndex = pitch >> 3;
-  bitWrite(buffer[chunkIndex], (chunkIndex << 3) ^ pitch, on);
-}
-
-/**
- * Read bit from pitch buffer.
- * @param buffer The pitch buffer
- * @param pitch MIDI key (0 - 127)
- * @return True when on
- */
-bool readBufferBit(byte( & buffer)[16], byte pitch) {
-  byte chunkIndex = pitch >> 3;
-  return bitRead(buffer[chunkIndex], (chunkIndex << 3) ^ pitch);
-}
-
-/**
- * Clear pitch buffer.
- * @param buffer The pitch buffer
- */
-void clearBuffer(byte( & buffer)[16]) {
-  for (byte chunkIndex = 0; chunkIndex < 16; chunkIndex++) {
-    buffer[chunkIndex] = 0x00;
+void clearNewPipesBuffer() {
+  for (byte pipeIndex = 0; pipeIndex < NUM_PIPES; pipeIndex++) {
+    for (byte pitch = 0; pitch < 128; pitch++) {
+      newPipes[pipeIndex][pitch] = false;
+    }
   }
-}
-
-/**
- * Return the MIDI key value based on the pitch buffer chunk and bit indexes.
- * @param chunkIndex (0 - 15)
- * @param bitIndex (0 - 7)
- * @return MIDI key (0 - 127)
- */
-byte pitchFromBufferIndexes(byte chunkIndex, byte bitIndex) {
-  return (chunkIndex << 3) | bitIndex;
 }
 
 /**
  * Set a newly active pipe.
  * @param channel Pipe MIDI channel (MIN_CHANNEL_PIPES - MAX_CHANNEL_PIPES)
- * @param pitch MIDI key (0 - 127) Out of range values are ignored.
+ * @param pitch MIDI key (0 - 255) Values above 127 are ignored.
  */
-void setNewBufferPipe(byte channel, int pitch) {
+void setNewBufferPipe(byte channel, byte pitch) {
   if (pitch >= 0 && pitch <= 127) {
-    writeBufferBit(newPipes[channel - MIN_CHANNEL_PIPES], pitch, true);
+    newPipes[channel - MIN_CHANNEL_PIPES][pitch] = true;
   }
 }
 
@@ -302,42 +270,33 @@ void setNewBufferPipe(byte channel, int pitch) {
  * then send the MIDI note on/off events to the pipes accordingly.
  */
 void updatePipes() {
-  // Clear newly active pipes buffers
-  for (byte pipesIndex = 0; pipesIndex < NUM_PIPES; pipesIndex++) {
-    clearBuffer(newPipes[pipesIndex]);
-  }
+  byte channelIndex;
 
   // Compute the newly active pipes buffer based on the active keys and stops
+  clearNewPipesBuffer();
   for (byte channel = MIN_CHANNEL_KEYBOARDS; channel <= MAX_CHANNEL_KEYBOARDS; channel++) {
-    byte keyboardIndex = channel - MIN_CHANNEL_KEYBOARDS;
-    for (byte chunkIndex = 0; chunkIndex < 16; chunkIndex++) {
-      byte & chunk = keys[keyboardIndex][chunkIndex];
-      for (byte bitIndex = 0; bitIndex < 8; bitIndex++) {
-        if (bitRead(chunk, bitIndex)) {
-          setBufferPipesForKey(channel, pitchFromBufferIndexes(chunkIndex, bitIndex));
-        }
+    channelIndex = channel - MIN_CHANNEL_KEYBOARDS;
+    for (byte pitch = 0; pitch < 128; pitch++) {
+      if (keys[channelIndex][pitch]) {
+        setBufferPipesForKey(channel, pitch);
       }
     }
   }
 
-  // Compare the new pipes buffer with the current one and send MIDI note events for each difference
+  // Compare the new pipes buffer with the current one and send MIDI note events for every difference
   for (byte channel = MIN_CHANNEL_PIPES; channel <= MAX_CHANNEL_PIPES; channel++) {
-    byte pipesIndex = channel - MIN_CHANNEL_PIPES;
-    for (byte chunkIndex = 0; chunkIndex < 16; chunkIndex++) {
-      byte & chunk = pipes[pipesIndex][chunkIndex];
-      byte & newChunk = newPipes[pipesIndex][chunkIndex];
-      for (byte bitIndex = 0; bitIndex < 8; bitIndex++) {
-        bool newState = bitRead(newChunk, bitIndex);
-        // Pipe state has changed
-        if (bitRead(chunk, bitIndex) != newState) {
-          bitWrite(chunk, bitIndex, newState);
-          // Send note event to reflect the new pipe state
-          sendNoteEvent(channel, pitchFromBufferIndexes(chunkIndex, bitIndex), newState);
-          // Process the MIDI in messages that have arrived during the note sending
-          // to prevent the input buffer from overrunning because sendNoteEvent
-          // is a blocking operation.
-          readAllMIDI();
-        }
+    channelIndex = channel - MIN_CHANNEL_PIPES;
+    for (byte pitch = 0; pitch < 128; pitch++) {
+      bool isPipeOn = newPipes[channelIndex][pitch];
+      // Pipe status has changed
+      if (isPipeOn != pipes[channelIndex][pitch]) {
+        pipes[channelIndex][pitch] = isPipeOn;
+        // Send note event to reflect the new pipe status
+        sendNoteEvent(channel, pitch, isPipeOn);
+        // Process the MIDI in messages that have arrived during the note sending
+        // to prevent the input buffer from overrunning because sendNoteEvent
+        // is a blocking operation.
+        readAllMIDI();
       }
     }
   }
@@ -348,27 +307,24 @@ void updatePipes() {
  */
 void panic() {
   for (byte channel = MIN_CHANNEL_PIPES; channel <= MAX_CHANNEL_PIPES; channel++) {
-    byte pipesIndex = channel - MIN_CHANNEL_PIPES;
-    for (byte chunkIndex = 0; chunkIndex < 16; chunkIndex++) {
-      pipes[pipesIndex][chunkIndex] = 0x00;
-      for (byte bitIndex = 0; bitIndex < 8; bitIndex++) {
-        sendNoteEvent(channel, pitchFromBufferIndexes(chunkIndex, bitIndex), false);
-      }
+    for (byte pitch = 0; pitch < 128; pitch++) {
+      sendNoteEvent(channel, pitch, false);
+      pipes[channel - MIN_CHANNEL_PIPES][pitch] = false;
     }
   }
 }
 
 /**
- * Set the state of a keyboard key
+ * Set the status of a keyboard key
  * @param channel Keyboard MIDI channel (0 - 15)
  * @param pitch MIDI key (0 - 127)
  * @param on True when the key is down
  */
 void setKey(byte channel, byte pitch, bool on) {
   if (channel >= MIN_CHANNEL_KEYBOARDS && channel <= MAX_CHANNEL_KEYBOARDS) {
-    byte keyboardIndex = channel - MIN_CHANNEL_KEYBOARDS;
-    if (readBufferBit(keys[keyboardIndex], pitch) != on) {
-      writeBufferBit(keys[keyboardIndex], pitch, on);
+    byte channelIndex = channel - MIN_CHANNEL_KEYBOARDS;
+    if (keys[channelIndex][pitch] != on) {
+      keys[channelIndex][pitch] = on;
       shouldUpdatePipes = true;
     }
   }
@@ -430,9 +386,11 @@ void handlePanicButton() {
   bool newPanicButtonState = digitalRead(PIN_PanicButton) == HIGH;
 
   if (!newPanicButtonState && panicButtonState) {
-    // Clear keys buffers
+    // Clear keys buffer
     for (byte keyboardIndex = 0; keyboardIndex < NUM_KEYBOARDS; keyboardIndex++) {
-      clearBuffer(keys[keyboardIndex]);
+      for (byte pitch = 0; pitch < 128; pitch++) {
+        keys[keyboardIndex][pitch] = false;
+      }
     }
 
     // Clear stops buffers
@@ -546,7 +504,7 @@ void loop() {
   // Panic button
   handlePanicButton();
 
-  // Update stop states
+  // Update stop statuses
   refreshStops();
 
   // Read incoming MIDI messages
