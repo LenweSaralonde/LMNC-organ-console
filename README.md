@@ -3,6 +3,13 @@ Look Mum No Computer organ console code
 
 Project website: https://www.lookmumnocomputer.com/projects#/joans-church-organ
 
+> This branch is a test of implementation using arrays of bytes instead of arrays of booleans, in an attempt to save RAM and improve performance.
+>
+> On an Arduino Nano, this implementation uses approx ~400 bytes of memory vs ~1600 for the implementation using arrays of booleans.
+> However, the measured performance of the `updatePipes()` function is worse and takes more than 3ms to run, vs 1.5 ms previously, which results in increased delay.
+>
+> The array of booleans is the more suitable implementation since it's faster, no matter if its memory footprint is higher.
+
 ## MIDI implementation
 
 ### MIDI In
