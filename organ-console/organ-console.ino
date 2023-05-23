@@ -37,8 +37,8 @@ const byte DPIN_SwellFlute4 = 4; // Swell Stop Principal 4
 const byte DPIN_SwellFifteenth2 = 3; // Swell Stop Fifteenth 2
 const byte DPIN_SwellTwelfth22thirds = 2; // Swell Stop twelfth 2 2/3
 
-const byte DPIN_GreatOpenDiapason8 = 15; // Great Stop Open Diapason 8
-const byte DPIN_GreatLieblich8 = 14; // Great Stop Lieblich 8
+const byte DPIN_GreatOpenDiapason8 = PIN_A1; // Great Stop Open Diapason 8
+const byte DPIN_GreatLieblich8 = PIN_A0; // Great Stop Lieblich 8
 const byte DPIN_GreatSalicional8 = 13; // Great Stop Salicional 8 NEED TO REMOVE ARDUINO LED TO MAKE THIS WORK
 const byte DPIN_GreatGemsHorn4 = 12; // Great Stop GemsHorn 4 dont know yet
 const byte DPIN_GreatSalicet4 = 11; // Great Stop Salicet 4
@@ -46,16 +46,16 @@ const byte DPIN_GreatNazard22thirds = 10; // Great Stop Nazard 2 2/3
 const byte DPIN_GreatHorn8 = 9; // Great Stop Horn 8
 const byte DPIN_GreatClarion4 = 8; // Great Stop Clarion 4
 
-const byte APIN_PedalBassFlute8 = 20; // Pedal BassFlute 8 (Analog pin)
-const byte DPIN_PedalBourdon16 = 19; // Pedal Bourdon 16
+const byte APIN_PedalBassFlute8 = PIN_A6; // Pedal BassFlute 8 (Analog pin)
+const byte DPIN_PedalBourdon16 = PIN_A5; // Pedal Bourdon 16
 
-const byte DPIN_SwellToGreat = 18;
-const byte DPIN_SwellToPedal = 17;
-const byte DPIN_GreatToPedal = 16;
+const byte DPIN_SwellToGreat = PIN_A4;
+const byte DPIN_SwellToPedal = PIN_A3;
+const byte DPIN_GreatToPedal = PIN_A2;
 
 // Panic button pin
 
-const byte APIN_PanicButton = 21; // Analog pin
+const byte APIN_PanicButton = PIN_A7; // Analog pin
 
 // Value above which a read on an analog pin is considered HIGH.
 // On Arduino Nano, analog pins A6 and A7 that can't run in digital mode
@@ -318,6 +318,11 @@ void panic() {
       pipes[channel - MIN_CHANNEL_PIPES][pitch] = false;
     }
   }
+
+  MIDI.sendProgramChange(19, CHANNEL_PIPES_PRINCIPAL + 1); // Pipe organ
+  MIDI.sendProgramChange(16, CHANNEL_PIPES_STRINGS + 1); // Elec organ 1
+  MIDI.sendProgramChange(72, CHANNEL_PIPES_FLUTES + 1); // Piccolo
+  MIDI.sendProgramChange(20, CHANNEL_PIPES_REEDS + 1); // Reed organ
 }
 
 /**
