@@ -72,3 +72,7 @@ The `sendNoteEvent()` sends the actual Note on / note of events using the MIDI l
 When this process is complete, we may already have the `shouldUpdatePipes` set to `true` if some MIDI in messages were received during `updatePipes()`.
 
 Depending on the time `updatePipes()` took to run, some notes may appear to have been dropped (ie if the same note was on then off during the same `updatePipes()` iteration, it won't be heard at all because only the last status is used).
+
+## Additional notes
+
+If using Visual Studio Code, add `"__AVR_ATmega32U4__"` to the `defines` in your `.vscode/c_cpp_properties.json` file to avoid the annoying error on `MIDI_CREATE_DEFAULT_INSTANCE()`.
