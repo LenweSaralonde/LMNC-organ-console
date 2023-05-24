@@ -318,11 +318,6 @@ void panic() {
       pipes[channel - MIN_CHANNEL_PIPES][pitch] = false;
     }
   }
-
-  MIDI.sendProgramChange(19, CHANNEL_PIPES_PRINCIPAL + 1); // Pipe organ
-  MIDI.sendProgramChange(16, CHANNEL_PIPES_STRINGS + 1);   // Elec organ 1
-  MIDI.sendProgramChange(72, CHANNEL_PIPES_FLUTES + 1);    // Piccolo
-  MIDI.sendProgramChange(20, CHANNEL_PIPES_REEDS + 1);     // Reed organ
 }
 
 /**
