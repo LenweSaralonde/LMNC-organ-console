@@ -12,9 +12,9 @@
 // Pipes MIDI channels
 
 const byte CHANNEL_PIPES_PRINCIPAL = 12; // MIDI channel for "Principal" pipes
-const byte CHANNEL_PIPES_STRINGS = 13; // MIDI channel for "String" pipes
-const byte CHANNEL_PIPES_FLUTES = 14; // MIDI channel for "Flute" pipes
-const byte CHANNEL_PIPES_REEDS = 15; // MIDI channel for "Reed" pipes
+const byte CHANNEL_PIPES_STRINGS = 13;   // MIDI channel for "String" pipes
+const byte CHANNEL_PIPES_FLUTES = 14;    // MIDI channel for "Flute" pipes
+const byte CHANNEL_PIPES_REEDS = 15;     // MIDI channel for "Reed" pipes
 
 const byte MIN_CHANNEL_PIPES = 12; // The lowest MIDI channel used by pipes
 const byte MAX_CHANNEL_PIPES = 15; // The highest MIDI channel used by pipes
@@ -30,24 +30,24 @@ const byte MAX_CHANNEL_KEYBOARDS = 2; // The lowest MIDI channel used by keyboar
 
 // Stops pins
 
-const byte DPIN_SwellOpenDiapason8 = 7; // Swell Stop Open Diapason 8
+const byte DPIN_SwellOpenDiapason8 = 7;    // Swell Stop Open Diapason 8
 const byte DPIN_SwellStoppedDiapason8 = 6; // Swell Stop Stopped Diapason 8
-const byte DPIN_SwellPrincipal4 = 5; // Swell Stop Principal 4
-const byte DPIN_SwellFlute4 = 4; // Swell Stop Principal 4
-const byte DPIN_SwellFifteenth2 = 3; // Swell Stop Fifteenth 2
-const byte DPIN_SwellTwelfth22thirds = 2; // Swell Stop twelfth 2 2/3
+const byte DPIN_SwellPrincipal4 = 5;       // Swell Stop Principal 4
+const byte DPIN_SwellFlute4 = 4;           // Swell Stop Principal 4
+const byte DPIN_SwellFifteenth2 = 3;       // Swell Stop Fifteenth 2
+const byte DPIN_SwellTwelfth22thirds = 2;  // Swell Stop twelfth 2 2/3
 
 const byte DPIN_GreatOpenDiapason8 = PIN_A1; // Great Stop Open Diapason 8
-const byte DPIN_GreatLieblich8 = PIN_A0; // Great Stop Lieblich 8
-const byte DPIN_GreatSalicional8 = 13; // Great Stop Salicional 8 NEED TO REMOVE ARDUINO LED TO MAKE THIS WORK
-const byte DPIN_GreatGemsHorn4 = 12; // Great Stop GemsHorn 4 dont know yet
-const byte DPIN_GreatSalicet4 = 11; // Great Stop Salicet 4
-const byte DPIN_GreatNazard22thirds = 10; // Great Stop Nazard 2 2/3
-const byte DPIN_GreatHorn8 = 9; // Great Stop Horn 8
-const byte DPIN_GreatClarion4 = 8; // Great Stop Clarion 4
+const byte DPIN_GreatLieblich8 = PIN_A0;     // Great Stop Lieblich 8
+const byte DPIN_GreatSalicional8 = 13;       // Great Stop Salicional 8 NEED TO REMOVE ARDUINO LED TO MAKE THIS WORK
+const byte DPIN_GreatGemsHorn4 = 12;         // Great Stop GemsHorn 4 dont know yet
+const byte DPIN_GreatSalicet4 = 11;          // Great Stop Salicet 4
+const byte DPIN_GreatNazard22thirds = 10;    // Great Stop Nazard 2 2/3
+const byte DPIN_GreatHorn8 = 9;              // Great Stop Horn 8
+const byte DPIN_GreatClarion4 = 8;           // Great Stop Clarion 4
 
 const byte APIN_PedalBassFlute8 = PIN_A6; // Pedal BassFlute 8 (Analog pin)
-const byte DPIN_PedalBourdon16 = PIN_A5; // Pedal Bourdon 16
+const byte DPIN_PedalBourdon16 = PIN_A5;  // Pedal Bourdon 16
 
 const byte DPIN_SwellToGreat = PIN_A4;
 const byte DPIN_SwellToPedal = PIN_A3;
@@ -115,7 +115,7 @@ const byte NUM_KEYBOARDS = MAX_CHANNEL_KEYBOARDS - MIN_CHANNEL_KEYBOARDS + 1;
 const byte NUM_PIPES = MAX_CHANNEL_PIPES - MIN_CHANNEL_PIPES + 1;
 
 bool keys[NUM_KEYBOARDS][128] = {}; // Active keys buffer
-bool pipes[NUM_PIPES][128] = {}; // Active pipes buffer
+bool pipes[NUM_PIPES][128] = {};    // Active pipes buffer
 bool newPipes[NUM_PIPES][128] = {}; // Newly active pipes buffer
 
 // Set to true when the keys/stops configuration has changed and the pipes need to be recomputed
@@ -320,9 +320,9 @@ void panic() {
   }
 
   MIDI.sendProgramChange(19, CHANNEL_PIPES_PRINCIPAL + 1); // Pipe organ
-  MIDI.sendProgramChange(16, CHANNEL_PIPES_STRINGS + 1); // Elec organ 1
-  MIDI.sendProgramChange(72, CHANNEL_PIPES_FLUTES + 1); // Piccolo
-  MIDI.sendProgramChange(20, CHANNEL_PIPES_REEDS + 1); // Reed organ
+  MIDI.sendProgramChange(16, CHANNEL_PIPES_STRINGS + 1);   // Elec organ 1
+  MIDI.sendProgramChange(72, CHANNEL_PIPES_FLUTES + 1);    // Piccolo
+  MIDI.sendProgramChange(20, CHANNEL_PIPES_REEDS + 1);     // Reed organ
 }
 
 /**
@@ -345,40 +345,32 @@ void setKey(byte channel, byte pitch, bool on) {
  * Refresh the active stops buffers.
  */
 void refreshStops() {
-  byte newSwellStops =
-    (digitalRead(DPIN_SwellOpenDiapason8) == HIGH ? SwellOpenDiapason8 : 0x00) |
-    (digitalRead(DPIN_SwellStoppedDiapason8) == HIGH ? SwellStoppedDiapason8 : 0x00) |
-    (digitalRead(DPIN_SwellPrincipal4) == HIGH ? SwellPrincipal4 : 0x00) |
-    (digitalRead(DPIN_SwellFlute4) == HIGH ? SwellFlute4 : 0x00) |
-    (digitalRead(DPIN_SwellFifteenth2) == HIGH ? SwellFifteenth2 : 0x00) |
-    (digitalRead(DPIN_SwellTwelfth22thirds) == HIGH ? SwellTwelfth22thirds : 0x00);
+  byte newSwellStops = (digitalRead(DPIN_SwellOpenDiapason8) == HIGH ? SwellOpenDiapason8 : 0x00) |
+                       (digitalRead(DPIN_SwellStoppedDiapason8) == HIGH ? SwellStoppedDiapason8 : 0x00) |
+                       (digitalRead(DPIN_SwellPrincipal4) == HIGH ? SwellPrincipal4 : 0x00) |
+                       (digitalRead(DPIN_SwellFlute4) == HIGH ? SwellFlute4 : 0x00) |
+                       (digitalRead(DPIN_SwellFifteenth2) == HIGH ? SwellFifteenth2 : 0x00) |
+                       (digitalRead(DPIN_SwellTwelfth22thirds) == HIGH ? SwellTwelfth22thirds : 0x00);
 
-  byte newGreatStops =
-    (digitalRead(DPIN_GreatOpenDiapason8) == HIGH ? GreatOpenDiapason8 : 0x00) |
-    (digitalRead(DPIN_GreatLieblich8) == HIGH ? GreatLieblich8 : 0x00) |
-    (digitalRead(DPIN_GreatSalicional8) == HIGH ? GreatSalicional8 : 0x00) |
-    (digitalRead(DPIN_GreatGemsHorn4) == HIGH ? GreatGemsHorn4 : 0x00) |
-    (digitalRead(DPIN_GreatSalicet4) == HIGH ? GreatSalicet4 : 0x00) |
-    (digitalRead(DPIN_GreatNazard22thirds) == HIGH ? GreatNazard22thirds : 0x00) |
-    (digitalRead(DPIN_GreatHorn8) == HIGH ? GreatHorn8 : 0x00) |
-    (digitalRead(DPIN_GreatClarion4) == HIGH ? GreatClarion4 : 0x00);
+  byte newGreatStops = (digitalRead(DPIN_GreatOpenDiapason8) == HIGH ? GreatOpenDiapason8 : 0x00) |
+                       (digitalRead(DPIN_GreatLieblich8) == HIGH ? GreatLieblich8 : 0x00) |
+                       (digitalRead(DPIN_GreatSalicional8) == HIGH ? GreatSalicional8 : 0x00) |
+                       (digitalRead(DPIN_GreatGemsHorn4) == HIGH ? GreatGemsHorn4 : 0x00) |
+                       (digitalRead(DPIN_GreatSalicet4) == HIGH ? GreatSalicet4 : 0x00) |
+                       (digitalRead(DPIN_GreatNazard22thirds) == HIGH ? GreatNazard22thirds : 0x00) |
+                       (digitalRead(DPIN_GreatHorn8) == HIGH ? GreatHorn8 : 0x00) |
+                       (digitalRead(DPIN_GreatClarion4) == HIGH ? GreatClarion4 : 0x00);
 
-  byte newPedalStops =
-    (analogRead(APIN_PedalBassFlute8) > ANALOG_READ_THRESHOLD ? PedalBassFlute8 : 0x00) |
-    (digitalRead(DPIN_PedalBourdon16) == HIGH ? PedalBourdon16 : 0x00);
+  byte newPedalStops = (analogRead(APIN_PedalBassFlute8) > ANALOG_READ_THRESHOLD ? PedalBassFlute8 : 0x00) |
+                       (digitalRead(DPIN_PedalBourdon16) == HIGH ? PedalBourdon16 : 0x00);
 
-  byte newCouplerStops =
-    (digitalRead(DPIN_SwellToGreat) == HIGH ? SwellToGreat : 0x00) |
-    (digitalRead(DPIN_SwellToPedal) == HIGH ? SwellToPedal : 0x00) |
-    (digitalRead(DPIN_GreatToPedal) == HIGH ? GreatToPedal : 0x00);
+  byte newCouplerStops = (digitalRead(DPIN_SwellToGreat) == HIGH ? SwellToGreat : 0x00) |
+                         (digitalRead(DPIN_SwellToPedal) == HIGH ? SwellToPedal : 0x00) |
+                         (digitalRead(DPIN_GreatToPedal) == HIGH ? GreatToPedal : 0x00);
 
   // Update pipes if the stops configuration has changed
-  if (
-    newSwellStops != swellStops ||
-    newGreatStops != greatStops ||
-    newPedalStops != pedalStops ||
-    newCouplerStops != couplerStops
-  ) {
+  if (newSwellStops != swellStops || newGreatStops != greatStops || newPedalStops != pedalStops ||
+      newCouplerStops != couplerStops) {
     shouldUpdatePipes = true;
   }
 
@@ -457,7 +449,7 @@ void sendNoteEvent(byte channel, byte pitch, bool on) {
  * Process all the incoming MIDI messages in the buffer.
  */
 void readAllMIDI() {
-  while (MIDI.getTransport() -> available() != 0) {
+  while (MIDI.getTransport()->available() != 0) {
     MIDI.read();
   }
 }
