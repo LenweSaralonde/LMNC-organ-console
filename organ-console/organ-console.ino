@@ -29,29 +29,30 @@ const byte MIN_CHANNEL_KEYBOARDS = 0; // The lowest MIDI channel used by keyboar
 const byte MAX_CHANNEL_KEYBOARDS = 2; // The lowest MIDI channel used by keyboards
 
 // Stops pins
+// (No need to remove the LED for pin 13 if using an external pull down resistor)
 
-const byte DPIN_SwellOpenDiapason8 = 7;    // Swell Stop Open Diapason 8
-const byte DPIN_SwellStoppedDiapason8 = 6; // Swell Stop Stopped Diapason 8
-const byte DPIN_SwellPrincipal4 = 5;       // Swell Stop Principal 4
-const byte DPIN_SwellFlute4 = 4;           // Swell Stop Principal 4
-const byte DPIN_SwellFifteenth2 = 3;       // Swell Stop Fifteenth 2
-const byte DPIN_SwellTwelfth22thirds = 2;  // Swell Stop twelfth 2 2/3
+const byte DPIN_SwellOpenDiapason8 = 7;    // Swell Open Diapason 8
+const byte DPIN_SwellStoppedDiapason8 = 6; // Swell Stopped Diapason 8
+const byte DPIN_SwellPrincipal4 = 5;       // Swell Principal 4
+const byte DPIN_SwellFlute4 = 4;           // Swell Flute 4
+const byte DPIN_SwellFifteenth2 = 3;       // Swell Fifteenth 2
+const byte DPIN_SwellTwelfth22thirds = 2;  // Swell Twelfth 2 2/3
 
-const byte DPIN_GreatOpenDiapason8 = PIN_A1; // Great Stop Open Diapason 8
-const byte DPIN_GreatLieblich8 = PIN_A0;     // Great Stop Lieblich 8
-const byte DPIN_GreatSalicional8 = 13;       // Great Stop Salicional 8 NEED TO REMOVE ARDUINO LED TO MAKE THIS WORK
-const byte DPIN_GreatGemsHorn4 = 12;         // Great Stop GemsHorn 4 dont know yet
-const byte DPIN_GreatSalicet4 = 11;          // Great Stop Salicet 4
-const byte DPIN_GreatNazard22thirds = 10;    // Great Stop Nazard 2 2/3
-const byte DPIN_GreatHorn8 = 9;              // Great Stop Horn 8
-const byte DPIN_GreatClarion4 = 8;           // Great Stop Clarion 4
+const byte DPIN_GreatOpenDiapason8 = PIN_A1; // Great Open Diapason 8
+const byte DPIN_GreatLieblich8 = PIN_A0;     // Great Lieblich 8
+const byte DPIN_GreatSalicional8 = 13;       // Great Salicional 8
+const byte DPIN_GreatGemsHorn4 = 12;         // Great Gemshorn 4
+const byte DPIN_GreatSalicet4 = 11;          // Great Salicet 4
+const byte DPIN_GreatNazard22thirds = 10;    // Great Nazard 2 2/3
+const byte DPIN_GreatHorn8 = 9;              // Great Horn 8
+const byte DPIN_GreatClarion4 = 8;           // Great Clarion 4
 
-const byte APIN_PedalBassFlute8 = PIN_A6; // Pedal BassFlute 8 (Analog pin)
+const byte APIN_PedalBassFlute8 = PIN_A6; // Pedal Bass Flute 8 (Analog pin)
 const byte DPIN_PedalBourdon16 = PIN_A5;  // Pedal Bourdon 16
 
-const byte DPIN_SwellToGreat = PIN_A4;
-const byte DPIN_SwellToPedal = PIN_A3;
-const byte DPIN_GreatToPedal = PIN_A2;
+const byte DPIN_SwellToGreat = PIN_A4; // Coupler Swell to Great
+const byte DPIN_SwellToPedal = PIN_A3; // Coupler Swell to Pedal
+const byte DPIN_GreatToPedal = PIN_A2; // Coupler Great to Pedal
 
 // Panic button pin
 
@@ -94,7 +95,7 @@ const byte GreatToPedal = 0x04;
 
 const byte Octave = 12;
 const byte TwoOctave = 2 * Octave;
-const byte Twelfth = TwoOctave + 7;
+const byte Twelfth = Octave + 7;
 
 ////////////////////////////// GLOBALS //////////////////////////////
 
@@ -175,20 +176,19 @@ void setSwellBufferPipesForKey(byte pitch) {
   if (swellStops & SwellStoppedDiapason8) {
     setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch);
   }
-  // Swell stop to Principal pipes + 1 Octave
+  // Swell stop to Principal pipes + 1 octave
   if (swellStops & SwellPrincipal4) {
     setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch + Octave);
   }
-  // Swell stop to Flute pipes + 1 & 2 Octave
+  // Swell stop to Flute pipes + 1 octave
   if (swellStops & SwellFlute4) {
     setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch + Octave);
-    setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch + TwoOctave);
   }
-  // Swell stop to Principal pipes + 2 Octave
+  // Swell stop to Principal pipes + 2 octaves
   if (swellStops & SwellFifteenth2) {
     setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch + TwoOctave);
   }
-  // Swell stop to Principal pipes + 2 Octave and a fifth
+  // Swell stop to Principal pipes + 1 octave and a fifth
   if (swellStops & SwellTwelfth22thirds) {
     setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch + Twelfth);
   }
@@ -211,15 +211,15 @@ void setGreatBufferPipesForKey(byte pitch) {
   if (greatStops & GreatSalicional8) {
     setNewBufferPipe(CHANNEL_PIPES_STRINGS, pitch);
   }
-  // Great stop to DONT KNOW YET
+  // Great stop to Flute pipes + 1 octave
   if (greatStops & GreatGemsHorn4) {
-    setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch + Octave);
+    setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch + Octave);
   }
-  // Great stop to DONT KNOW YET
+  // Great stop to String pipes + 1 octave
   if (greatStops & GreatSalicet4) {
     setNewBufferPipe(CHANNEL_PIPES_STRINGS, pitch + Octave);
   }
-  // Great stop to Flute rank + a third
+  // Great stop to Flute pipes + 1 octave and a fifth
   if (greatStops & GreatNazard22thirds) {
     setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch + Twelfth);
   }
@@ -238,14 +238,13 @@ void setGreatBufferPipesForKey(byte pitch) {
  * @param pitch MIDI key (0 - 127)
  */
 void setPedalBufferPipesForKey(byte pitch) {
-  // Pedal stop to String pipes
+  // Pedal stop to Flute pipes
   if (pedalStops & PedalBassFlute8) {
-    setNewBufferPipe(CHANNEL_PIPES_PRINCIPAL, pitch);
-    setNewBufferPipe(CHANNEL_PIPES_STRINGS, pitch);
-  }
-  // Pedal stop bo Bourdon pipes
-  if (pedalStops & PedalBourdon16) {
     setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch);
+  }
+  // Pedal stop to Flute pipes - 1 octave
+  if (pedalStops & PedalBourdon16) {
+    setNewBufferPipe(CHANNEL_PIPES_FLUTES, pitch - Octave);
   }
 }
 
