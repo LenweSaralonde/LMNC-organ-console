@@ -73,6 +73,74 @@ When this process is complete, we may already have the `shouldUpdatePipes` set t
 
 Depending on the time `updatePipes()` took to run, some notes may appear to have been dropped (ie if the same note was on then off during the same `updatePipes()` iteration, it won't be heard at all because only the last status is used).
 
+## Organ stops explained
+
+Sources:
+* [List of pipe organ stops](https://en.wikipedia.org/wiki/List_of_pipe_organ_stops)
+* [Dictionary of the most frequently used organ stops](https://die-orgelseite.de/registertabelle_e.htm)
+* [Pitch Levels](https://organhistoricalsociety.org/OrganHistory/works/works04.htm)
+* [Functions of the organ: Couplers](https://youtu.be/YBN11vBqEw0?t=40)
+* [Lesson 7 Mixture & Mutation Stops](https://youtu.be/MWSRE0D7-WM?t=210)
+
+Organ stops set which sets of pipes will be activated by the keyboards keys.
+
+### Types of stops
+
+There are 3 kinds of stops on the Joan's church organ:
+* **Regular stops** that activates a single row of pipes for the keyboard, with or without octave transposition.
+* **Mutation stops** that activates a single row of pipes for the keyboard but with a transposition that ends up to a different note (can be a fifth or a third).
+* **Coupler stops** that allows to play the stops of another keyboard in addition to its own. For example, the "Swell to Great" means that all stops from the Swell keyboard can be played on the Great keyboard (playing the Great keyboard will play the Great + Swell stops).
+
+Some organs also have **Mixture stops** that basically combine several rows of pipes and/or mutations. Joan's church organ doesn't have mixture stops but has a preset board and buttons that provides similar functionality.
+
+### Stop pitch
+
+The organ stops also have a number to determine the pitch, in feet, as a power of two (**2**, **4**, **8**, **16**, **32** etc.). As for organ pipe sizes, the larger is the number, the lower is the pitch.
+
+A **8′** pitch corresponds to the **middle C** (MIDI pitch *60*) and results in no transposition. A **4′** pitch is a 1 octave up transposition (half size, double pitch), **16′** is 1 octave down (double size, half pitch), **2′** is 2 octaves up, **32′** is 2 octaves down etc. Some large organs even have **64′** stops and can produce infrasound down to 8 Hz.
+
+Mutation stops have a pitch that is not a power of 2 pitch such as **2​2⁄3′** that corresponds to 1 octave + 1 fifth (12 + 7 semitones).
+
+## Joan's church organ stops implementation
+
+### Pipe rows
+
+* **Principal**: The classic organ straight zinc flue pipes.
+* **Flutes**: The square wooden flue pipes.
+* **Strings**: The straight metal flue pipes with a hole on the top.
+* **Reeds**: The cone shaped metal reed pipes.
+
+### Stops
+
+Based on the [pitch level](https://organhistoricalsociety.org/OrganHistory/works/works04.htm) and the [list of pipe organ stops on Wikipedia](https://en.wikipedia.org/wiki/List_of_pipe_organ_stops), we can determine the implementation for the Joan's church organ.
+
+| Stop | Pipes row | Pitch offset | Description |
+| :--- | :---: | :---: | :--- |
+| ***Swell Keyboard*** |
+| Open Diapason 8 | Principal | 0 | A flue stop that is the "backbone" sound of the organ. |
+| Stopped Diapason 8 | Flute | 0 | A basic stopped 8′ and/or 16' flute in the manuals. |
+| Principal 4 | Principal | +12 | A 4′ Principal. "Prestant" often indicates ranks that have pipes mounted in the front of the organ case. |
+| Flute 4 | Flute | +12 | The Speelfluyt was reconstructed by Jürgen Ahrend for the Schnitger organ in the Martinikerk Groningen out of one remaining pipe. |
+| Fifteenth 2 | Principal | +24 | The manual 2′ Principal or Diapason; its name merely signifies that it is above (i.e. "super") the 4′ Octave. |
+| Twelfth 2​2⁄3 | Principal | +19 | A principal mutation stop of 2+2⁄3′ |
+| ***Great Keyboard*** |
+| Open Diapason 8 | Principal | 0 | A flue stop that is the "backbone" sound of the organ. |
+| Lieblich 8 | Flute | 0 | Means "Soft Flute" in german. |
+| Salicional 8 | String | 0 | An 8′ (sometimes 4' or 16') string stop, softer in tone than the Gamba. |
+| Gemshorn 4 | Flute | +12 | A flue stop usually at 4' or 2' pitch but sometimes 8' pitch; similar tone as Spitz Flute (A 4' or 2' pitch flute with metal pipes tapered to a point at the top). |
+| Salicet 4 | String | +12 | An 8′ (sometimes 4' or 16') string stop, softer in tone than the Gamba.
+| Nazard 2​2⁄3 | Flute | +19 | A flute mutation stop of 2+2⁄3′ pitch (sounding a twelfth above written pitch) |
+| Horn 8 | Reed | 0 | A 16', 8' and/or sometimes 4' pitch reed stop imitative of the instrument. |
+| Clarion 4 | Reed | +12 | A 4′ or 2′ Pitch Trumpet, it is a chorus reed. |
+| ***Pedal Board*** |
+| Bass Flute 8 | Flute | 0 |
+| Bourdon 16 | Flute | -12 | A wide-scaled stopped-flute, usually 16′ and/or 8′ pitch on the manuals, and 16′ (sometimes 8'), and/or 32′ pitch in the pedals (where it may be called Subbass or Contra Bourdon) |
+
+Couplers:
+* **Swell to Great**: Great keyboard plays Great + Swell stops.
+* **Swell to Pedal**: Pedal keyboard plays Pedal + Swell stops.
+* **Great to Pedal**: Pedal keyboard plays Pedal + Great stops.
+
 ## Additional notes
 
 If using Visual Studio Code, add `"__AVR_ATmega32U4__"` to the `defines` in your `.vscode/c_cpp_properties.json` file to avoid the annoying error on `MIDI_CREATE_DEFAULT_INSTANCE()`.
