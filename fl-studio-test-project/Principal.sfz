@@ -1,111 +1,609 @@
-/////////////////////////////////////////////////////////////////////////////
-// sfz definition file
-// copyright Chicken Systems, Inc.
-// -------------------------------------------------------------------------
-// Application: Translator 6 6.0, Build 27
-// Vendor: 
+<global> tune=-11
 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_1_Pre5_C0_RR1.wav lokey=36 hikey=36 end=551697 loop_mode=loop_continuous loopstart=187196 loopend=551696 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_2_Pre5_C0_RR2.wav lokey=36 hikey=36 end=559355 loop_mode=loop_continuous loopstart=190714 loopend=559354 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<group> group_label=NewGroups-01
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=0 hikey=0 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=0 hikey=0 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=0 hikey=12 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=12 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=1 hikey=1 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=1 hikey=1 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_3_Pre5_C#0_RR1.wav lokey=13 hikey=13 end=551470 loop_mode=loop_continuous loopstart=186969 loopend=551469 pitch_keycenter=13 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=2 hikey=2 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=2 hikey=2 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_5_Pre5_D0_RR1.wav lokey=14 hikey=14 end=552526 loop_mode=loop_continuous loopstart=188025 loopend=552525 pitch_keycenter=14 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=3 hikey=3 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=3 hikey=3 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_7_Pre5_D#0_RR1.wav lokey=15 hikey=15 end=568409 loop_mode=loop_continuous loopstart=193408 loopend=568408 pitch_keycenter=15 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=4 hikey=4 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=4 hikey=4 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_9_Pre5_E0_RR1.wav lokey=16 hikey=16 end=537233 loop_mode=loop_continuous loopstart=182938 loopend=537232 pitch_keycenter=16 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=5 hikey=5 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=5 hikey=5 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_11_Pre5_F0_RR1.wav lokey=17 hikey=17 end=536795 loop_mode=loop_continuous loopstart=182500 loopend=536794 pitch_keycenter=17 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=6 hikey=6 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=6 hikey=6 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_13_Pre5_F#0_RR1.wav lokey=18 hikey=18 end=537946 loop_mode=loop_continuous loopstart=183651 loopend=537945 pitch_keycenter=18 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=7 hikey=7 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=7 hikey=7 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_15_Pre5_G0_RR1.wav lokey=19 hikey=19 end=580843 loop_mode=loop_continuous loopstart=196842 loopend=580842 pitch_keycenter=19 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=8 hikey=8 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=8 hikey=8 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_17_Pre5_G#0_RR1.wav lokey=20 hikey=20 end=557284 loop_mode=loop_continuous loopstart=188643 loopend=557283 pitch_keycenter=20 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=9 hikey=9 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=9 hikey=9 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_19_Pre5_A0_RR1.wav lokey=21 hikey=21 end=564053 loop_mode=loop_continuous loopstart=190804 loopend=564052 pitch_keycenter=21 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=10 hikey=10 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=10 hikey=10 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_21_Pre5_A#0_RR1.wav lokey=22 hikey=22 end=545834 loop_mode=loop_continuous loopstart=185833 loopend=545833 pitch_keycenter=22 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=11 hikey=11 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=11 hikey=11 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_23_Pre5_B0_RR1.wav lokey=23 hikey=23 end=552236 loop_mode=loop_continuous loopstart=187735 loopend=552235 pitch_keycenter=23 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=12 hikey=12 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=12 hikey=12 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_25_Pre5_C1_RR1.wav lokey=24 hikey=24 end=559339 loop_mode=loop_continuous loopstart=190698 loopend=559338 pitch_keycenter=24 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=13 hikey=13 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=13 hikey=13 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_27_Pre5_C#1_RR1.wav lokey=25 hikey=25 end=557337 loop_mode=loop_continuous loopstart=188696 loopend=557336 pitch_keycenter=25 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=14 hikey=14 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=14 hikey=14 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_29_Pre5_D1_RR1.wav lokey=26 hikey=26 end=558917 loop_mode=loop_continuous loopstart=190276 loopend=558916 pitch_keycenter=26 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=15 hikey=15 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=15 hikey=15 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_31_Pre5_D#1_RR1.wav lokey=27 hikey=27 end=558230 loop_mode=loop_continuous loopstart=189589 loopend=558229 pitch_keycenter=27 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=16 hikey=16 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=16 hikey=16 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_33_Pre5_E1_RR1.wav lokey=28 hikey=28 end=565654 loop_mode=loop_continuous loopstart=192405 loopend=565653 pitch_keycenter=28 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=17 hikey=17 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=17 hikey=17 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_35_Pre5_F1_RR1.wav lokey=29 hikey=29 end=551496 loop_mode=loop_continuous loopstart=186995 loopend=551495 pitch_keycenter=29 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=18 hikey=18 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=18 hikey=18 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_37_Pre5_F#1_RR1.wav lokey=30 hikey=30 end=564042 loop_mode=loop_continuous loopstart=190793 loopend=564041 pitch_keycenter=30 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=19 hikey=19 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=19 hikey=19 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_39_Pre5_G1_RR1.wav lokey=31 hikey=31 end=564206 loop_mode=loop_continuous loopstart=190957 loopend=564205 pitch_keycenter=31 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=20 hikey=20 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=20 hikey=20 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_41_Pre5_G#1_RR1.wav lokey=32 hikey=32 end=558563 loop_mode=loop_continuous loopstart=189922 loopend=558562 pitch_keycenter=32 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=21 hikey=21 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=21 hikey=21 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_43_Pre5_A1_RR1.wav lokey=33 hikey=33 end=552135 loop_mode=loop_continuous loopstart=187634 loopend=552134 pitch_keycenter=33 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=22 hikey=22 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=22 hikey=22 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_45_Pre5_A#1_RR1.wav lokey=34 hikey=34 end=552611 loop_mode=loop_continuous loopstart=188110 loopend=552610 pitch_keycenter=34 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=23 hikey=23 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=23 hikey=23 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_47_Pre5_B1_RR1.wav lokey=35 hikey=127 end=545179 loop_mode=loop_continuous loopstart=185178 loopend=545178 pitch_keycenter=35 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=24 hikey=24 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=24 hikey=24 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<group> group_label=NewGroups-02
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=25 hikey=25 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=25 hikey=25 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=0 hikey=12 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=12 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=26 hikey=26 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=26 hikey=26 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_4_Pre5_C#0_RR2.wav lokey=13 hikey=13 end=564428 loop_mode=loop_continuous loopstart=191179 loopend=564427 pitch_keycenter=13 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=27 hikey=27 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=27 hikey=27 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_6_Pre5_D0_RR2.wav lokey=14 hikey=14 end=557934 loop_mode=loop_continuous loopstart=189293 loopend=557933 pitch_keycenter=14 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=28 hikey=28 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=28 hikey=28 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_8_Pre5_D#0_RR2.wav lokey=15 hikey=15 end=580579 loop_mode=loop_continuous loopstart=196578 loopend=580578 pitch_keycenter=15 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=29 hikey=29 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=29 hikey=29 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_10_Pre5_E0_RR2.wav lokey=16 hikey=16 end=567101 loop_mode=loop_continuous loopstart=193852 loopend=567100 pitch_keycenter=16 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=30 hikey=30 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=30 hikey=30 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_12_Pre5_F0_RR2.wav lokey=17 hikey=17 end=570401 loop_mode=loop_continuous loopstart=195400 loopend=570400 pitch_keycenter=17 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=31 hikey=31 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=31 hikey=31 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_14_Pre5_F#0_RR2.wav lokey=18 hikey=18 end=565094 loop_mode=loop_continuous loopstart=191845 loopend=565093 pitch_keycenter=18 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=32 hikey=32 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=32 hikey=32 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_16_Pre5_G0_RR2.wav lokey=19 hikey=19 end=564296 loop_mode=loop_continuous loopstart=191047 loopend=564295 pitch_keycenter=19 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=33 hikey=33 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=33 hikey=33 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_18_Pre5_G#0_RR2.wav lokey=20 hikey=20 end=565485 loop_mode=loop_continuous loopstart=192236 loopend=565484 pitch_keycenter=20 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=34 hikey=34 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=34 hikey=34 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_20_Pre5_A0_RR2.wav lokey=21 hikey=21 end=544851 loop_mode=loop_continuous loopstart=184850 loopend=544850 pitch_keycenter=21 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=35 hikey=35 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=35 hikey=35 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_22_Pre5_A#0_RR2.wav lokey=22 hikey=22 end=551892 loop_mode=loop_continuous loopstart=187391 loopend=551891 pitch_keycenter=22 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_1_Pre5_C0_RR1.wav lokey=36 hikey=36 end=557876 loop_mode=loop_continuous loopstart=189235 loopend=557875 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_2_Pre5_C0_RR2.wav lokey=36 hikey=36 end=551179 loop_mode=loop_continuous loopstart=186678 loopend=551178 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_24_Pre5_B0_RR2.wav lokey=23 hikey=23 end=558029 loop_mode=loop_continuous loopstart=189388 loopend=558028 pitch_keycenter=23 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_3_Pre5_C#0_RR1.wav lokey=37 hikey=37 end=551623 loop_mode=loop_continuous loopstart=187122 loopend=551622 pitch_keycenter=37 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_4_Pre5_C#0_RR2.wav lokey=37 hikey=37 end=567059 loop_mode=loop_continuous loopstart=193810 loopend=567058 pitch_keycenter=37 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_26_Pre5_C1_RR2.wav lokey=24 hikey=24 end=565469 loop_mode=loop_continuous loopstart=192220 loopend=565468 pitch_keycenter=24 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_3_Pre5_C#0_RR1.wav lokey=37 hikey=37 end=551470 loop_mode=loop_continuous loopstart=186969 loopend=551469 pitch_keycenter=37 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_4_Pre5_C#0_RR2.wav lokey=37 hikey=37 end=564428 loop_mode=loop_continuous loopstart=191179 loopend=564427 pitch_keycenter=37 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_28_Pre5_C#1_RR2.wav lokey=25 hikey=25 end=594951 loop_mode=loop_continuous loopstart=201734 loopend=594950 pitch_keycenter=25 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_5_Pre5_D0_RR1.wav lokey=38 hikey=38 end=557955 loop_mode=loop_continuous loopstart=189314 loopend=557954 pitch_keycenter=38 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_6_Pre5_D0_RR2.wav lokey=38 hikey=38 end=552399 loop_mode=loop_continuous loopstart=187898 loopend=552398 pitch_keycenter=38 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_30_Pre5_D1_RR2.wav lokey=26 hikey=26 end=567598 loop_mode=loop_continuous loopstart=194349 loopend=567597 pitch_keycenter=26 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_5_Pre5_D0_RR1.wav lokey=38 hikey=38 end=552526 loop_mode=loop_continuous loopstart=188025 loopend=552525 pitch_keycenter=38 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_6_Pre5_D0_RR2.wav lokey=38 hikey=38 end=557934 loop_mode=loop_continuous loopstart=189293 loopend=557933 pitch_keycenter=38 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_32_Pre5_D#1_RR2.wav lokey=27 hikey=27 end=551876 loop_mode=loop_continuous loopstart=187375 loopend=551875 pitch_keycenter=27 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_7_Pre5_D#0_RR1.wav lokey=39 hikey=39 end=552030 loop_mode=loop_continuous loopstart=187529 loopend=552029 pitch_keycenter=39 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_8_Pre5_D#0_RR2.wav lokey=39 hikey=39 end=546299 loop_mode=loop_continuous loopstart=186298 loopend=546298 pitch_keycenter=39 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_34_Pre5_E1_RR2.wav lokey=28 hikey=28 end=567043 loop_mode=loop_continuous loopstart=193794 loopend=567042 pitch_keycenter=28 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_7_Pre5_D#0_RR1.wav lokey=39 hikey=39 end=568409 loop_mode=loop_continuous loopstart=193408 loopend=568408 pitch_keycenter=39 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_8_Pre5_D#0_RR2.wav lokey=39 hikey=39 end=580579 loop_mode=loop_continuous loopstart=196578 loopend=580578 pitch_keycenter=39 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_36_Pre5_F1_RR2.wav lokey=29 hikey=29 end=557062 loop_mode=loop_continuous loopstart=188421 loopend=557061 pitch_keycenter=29 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_9_Pre5_E0_RR1.wav lokey=40 hikey=40 end=569899 loop_mode=loop_continuous loopstart=194898 loopend=569898 pitch_keycenter=40 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_10_Pre5_E0_RR2.wav lokey=40 hikey=40 end=565067 loop_mode=loop_continuous loopstart=191818 loopend=565066 pitch_keycenter=40 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_38_Pre5_F#1_RR2.wav lokey=30 hikey=30 end=557850 loop_mode=loop_continuous loopstart=189209 loopend=557849 pitch_keycenter=30 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_9_Pre5_E0_RR1.wav lokey=40 hikey=40 end=537233 loop_mode=loop_continuous loopstart=182938 loopend=537232 pitch_keycenter=40 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_10_Pre5_E0_RR2.wav lokey=40 hikey=40 end=567101 loop_mode=loop_continuous loopstart=193852 loopend=567100 pitch_keycenter=40 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_40_Pre5_G1_RR2.wav lokey=31 hikey=31 end=568336 loop_mode=loop_continuous loopstart=193335 loopend=568335 pitch_keycenter=31 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_11_Pre5_F0_RR1.wav lokey=41 hikey=41 end=565659 loop_mode=loop_continuous loopstart=192410 loopend=565658 pitch_keycenter=41 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_12_Pre5_F0_RR2.wav lokey=41 hikey=41 end=564634 loop_mode=loop_continuous loopstart=191385 loopend=564633 pitch_keycenter=41 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_42_Pre5_G#1_RR2.wav lokey=32 hikey=32 end=568182 loop_mode=loop_continuous loopstart=193181 loopend=568181 pitch_keycenter=32 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_11_Pre5_F0_RR1.wav lokey=41 hikey=41 end=536795 loop_mode=loop_continuous loopstart=182500 loopend=536794 pitch_keycenter=41 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_12_Pre5_F0_RR2.wav lokey=41 hikey=41 end=570401 loop_mode=loop_continuous loopstart=195400 loopend=570400 pitch_keycenter=41 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_44_Pre5_A1_RR2.wav lokey=33 hikey=33 end=558452 loop_mode=loop_continuous loopstart=189811 loopend=558451 pitch_keycenter=33 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_13_Pre5_F#0_RR1.wav lokey=42 hikey=42 end=557411 loop_mode=loop_continuous loopstart=188770 loopend=557410 pitch_keycenter=42 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_14_Pre5_F#0_RR2.wav lokey=42 hikey=42 end=537840 loop_mode=loop_continuous loopstart=183545 loopend=537839 pitch_keycenter=42 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_46_Pre5_A#1_RR2.wav lokey=34 hikey=34 end=565368 loop_mode=loop_continuous loopstart=192119 loopend=565367 pitch_keycenter=34 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_13_Pre5_F#0_RR1.wav lokey=42 hikey=42 end=537946 loop_mode=loop_continuous loopstart=183651 loopend=537945 pitch_keycenter=42 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_14_Pre5_F#0_RR2.wav lokey=42 hikey=42 end=565094 loop_mode=loop_continuous loopstart=191845 loopend=565093 pitch_keycenter=42 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
-<region> sample=..\..\Samples\PRE5\P_48_Pre5_B1_RR2.wav lokey=35 hikey=127 end=552695 loop_mode=loop_continuous loopstart=188194 loopend=552694 pitch_keycenter=35 bend_up=200 bend_down=-200 amp_veltrack=38.582676 ampeg_release=0.1 pitchlfo_freq=5 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_15_Pre5_G0_RR1.wav lokey=43 hikey=43 end=565596 loop_mode=loop_continuous loopstart=192347 loopend=565595 pitch_keycenter=43 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_16_Pre5_G0_RR2.wav lokey=43 hikey=43 end=564212 loop_mode=loop_continuous loopstart=190963 loopend=564211 pitch_keycenter=43 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_15_Pre5_G0_RR1.wav lokey=43 hikey=43 end=580843 loop_mode=loop_continuous loopstart=196842 loopend=580842 pitch_keycenter=43 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_16_Pre5_G0_RR2.wav lokey=43 hikey=43 end=564296 loop_mode=loop_continuous loopstart=191047 loopend=564295 pitch_keycenter=43 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_17_Pre5_G#0_RR1.wav lokey=44 hikey=44 end=565432 loop_mode=loop_continuous loopstart=192183 loopend=565431 pitch_keycenter=44 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_18_Pre5_G#0_RR2.wav lokey=44 hikey=44 end=545432 loop_mode=loop_continuous loopstart=185431 loopend=545431 pitch_keycenter=44 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_17_Pre5_G#0_RR1.wav lokey=44 hikey=44 end=557284 loop_mode=loop_continuous loopstart=188643 loopend=557283 pitch_keycenter=44 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_18_Pre5_G#0_RR2.wav lokey=44 hikey=44 end=565485 loop_mode=loop_continuous loopstart=192236 loopend=565484 pitch_keycenter=44 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
 
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_19_Pre5_A0_RR1.wav lokey=45 hikey=45 end=546045 loop_mode=loop_continuous loopstart=186044 loopend=546044 pitch_keycenter=45 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_20_Pre5_A0_RR2.wav lokey=45 hikey=45 end=511791 loop_mode=loop_continuous loopstart=174290 loopend=511790 pitch_keycenter=45 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_19_Pre5_A0_RR1.wav lokey=45 hikey=45 end=564053 loop_mode=loop_continuous loopstart=190804 loopend=564052 pitch_keycenter=45 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_20_Pre5_A0_RR2.wav lokey=45 hikey=45 end=544851 loop_mode=loop_continuous loopstart=184850 loopend=544850 pitch_keycenter=45 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_21_Pre5_A#0_RR1.wav lokey=46 hikey=46 end=552812 loop_mode=loop_continuous loopstart=188311 loopend=552811 pitch_keycenter=46 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_22_Pre5_A#0_RR2.wav lokey=46 hikey=46 end=569257 loop_mode=loop_continuous loopstart=196008 loopend=569256 pitch_keycenter=46 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_21_Pre5_A#0_RR1.wav lokey=46 hikey=46 end=545834 loop_mode=loop_continuous loopstart=185833 loopend=545833 pitch_keycenter=46 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_22_Pre5_A#0_RR2.wav lokey=46 hikey=46 end=551892 loop_mode=loop_continuous loopstart=187391 loopend=551891 pitch_keycenter=46 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_23_Pre5_B0_RR1.wav lokey=47 hikey=47 end=559075 loop_mode=loop_continuous loopstart=190434 loopend=559074 pitch_keycenter=47 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_24_Pre5_B0_RR2.wav lokey=47 hikey=47 end=570417 loop_mode=loop_continuous loopstart=195416 loopend=570416 pitch_keycenter=47 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_23_Pre5_B0_RR1.wav lokey=47 hikey=47 end=552236 loop_mode=loop_continuous loopstart=187735 loopend=552235 pitch_keycenter=47 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_24_Pre5_B0_RR2.wav lokey=47 hikey=47 end=558029 loop_mode=loop_continuous loopstart=189388 loopend=558028 pitch_keycenter=47 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_25_Pre5_C1_RR1.wav lokey=48 hikey=48 end=558050 loop_mode=loop_continuous loopstart=189409 loopend=558049 pitch_keycenter=48 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_26_Pre5_C1_RR2.wav lokey=48 hikey=48 end=546299 loop_mode=loop_continuous loopstart=186298 loopend=546298 pitch_keycenter=48 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_25_Pre5_C1_RR1.wav lokey=48 hikey=48 end=559339 loop_mode=loop_continuous loopstart=190698 loopend=559338 pitch_keycenter=48 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_26_Pre5_C1_RR2.wav lokey=48 hikey=48 end=565469 loop_mode=loop_continuous loopstart=192220 loopend=565468 pitch_keycenter=48 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_27_Pre5_C#1_RR1.wav lokey=49 hikey=49 end=544339 loop_mode=loop_continuous loopstart=184338 loopend=544338 pitch_keycenter=49 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_28_Pre5_C#1_RR2.wav lokey=49 hikey=49 end=558256 loop_mode=loop_continuous loopstart=189615 loopend=558255 pitch_keycenter=49 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_27_Pre5_C#1_RR1.wav lokey=49 hikey=49 end=557337 loop_mode=loop_continuous loopstart=188696 loopend=557336 pitch_keycenter=49 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_28_Pre5_C#1_RR2.wav lokey=49 hikey=49 end=594951 loop_mode=loop_continuous loopstart=201734 loopend=594950 pitch_keycenter=49 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_29_Pre5_D1_RR1.wav lokey=50 hikey=50 end=551501 loop_mode=loop_continuous loopstart=187000 loopend=551500 pitch_keycenter=50 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_30_Pre5_D1_RR2.wav lokey=50 hikey=50 end=552436 loop_mode=loop_continuous loopstart=187935 loopend=552435 pitch_keycenter=50 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_29_Pre5_D1_RR1.wav lokey=50 hikey=50 end=558917 loop_mode=loop_continuous loopstart=190276 loopend=558916 pitch_keycenter=50 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_30_Pre5_D1_RR2.wav lokey=50 hikey=50 end=567598 loop_mode=loop_continuous loopstart=194349 loopend=567597 pitch_keycenter=50 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_31_Pre5_D#1_RR1.wav lokey=51 hikey=51 end=565046 loop_mode=loop_continuous loopstart=191797 loopend=565045 pitch_keycenter=51 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_32_Pre5_D#1_RR2.wav lokey=51 hikey=51 end=557226 loop_mode=loop_continuous loopstart=188585 loopend=557225 pitch_keycenter=51 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_31_Pre5_D#1_RR1.wav lokey=51 hikey=51 end=558230 loop_mode=loop_continuous loopstart=189589 loopend=558229 pitch_keycenter=51 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_32_Pre5_D#1_RR2.wav lokey=51 hikey=51 end=551876 loop_mode=loop_continuous loopstart=187375 loopend=551875 pitch_keycenter=51 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_33_Pre5_E1_RR1.wav lokey=52 hikey=52 end=589727 loop_mode=loop_continuous loopstart=200926 loopend=589726 pitch_keycenter=52 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_34_Pre5_E1_RR2.wav lokey=52 hikey=52 end=566959 loop_mode=loop_continuous loopstart=193710 loopend=566958 pitch_keycenter=52 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_33_Pre5_E1_RR1.wav lokey=52 hikey=52 end=565654 loop_mode=loop_continuous loopstart=192405 loopend=565653 pitch_keycenter=52 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_34_Pre5_E1_RR2.wav lokey=52 hikey=52 end=567043 loop_mode=loop_continuous loopstart=193794 loopend=567042 pitch_keycenter=52 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_35_Pre5_F1_RR1.wav lokey=53 hikey=53 end=557084 loop_mode=loop_continuous loopstart=188443 loopend=557083 pitch_keycenter=53 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_36_Pre5_F1_RR2.wav lokey=53 hikey=53 end=557237 loop_mode=loop_continuous loopstart=188596 loopend=557236 pitch_keycenter=53 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_35_Pre5_F1_RR1.wav lokey=53 hikey=53 end=551496 loop_mode=loop_continuous loopstart=186995 loopend=551495 pitch_keycenter=53 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_36_Pre5_F1_RR2.wav lokey=53 hikey=53 end=557062 loop_mode=loop_continuous loopstart=188421 loopend=557061 pitch_keycenter=53 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_37_Pre5_F#1_RR1.wav lokey=54 hikey=54 end=568240 loop_mode=loop_continuous loopstart=193239 loopend=568239 pitch_keycenter=54 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_38_Pre5_F#1_RR2.wav lokey=54 hikey=54 end=580320 loop_mode=loop_continuous loopstart=196319 loopend=580319 pitch_keycenter=54 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_37_Pre5_F#1_RR1.wav lokey=54 hikey=54 end=564042 loop_mode=loop_continuous loopstart=190793 loopend=564041 pitch_keycenter=54 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_38_Pre5_F#1_RR2.wav lokey=54 hikey=54 end=557850 loop_mode=loop_continuous loopstart=189209 loopend=557849 pitch_keycenter=54 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_39_Pre5_G1_RR1.wav lokey=55 hikey=55 end=558510 loop_mode=loop_continuous loopstart=189869 loopend=558509 pitch_keycenter=55 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_40_Pre5_G1_RR2.wav lokey=55 hikey=55 end=559006 loop_mode=loop_continuous loopstart=190365 loopend=559005 pitch_keycenter=55 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_39_Pre5_G1_RR1.wav lokey=55 hikey=55 end=564206 loop_mode=loop_continuous loopstart=190957 loopend=564205 pitch_keycenter=55 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_40_Pre5_G1_RR2.wav lokey=55 hikey=55 end=568336 loop_mode=loop_continuous loopstart=193335 loopend=568335 pitch_keycenter=55 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_41_Pre5_G#1_RR1.wav lokey=56 hikey=56 end=546082 loop_mode=loop_continuous loopstart=186081 loopend=546081 pitch_keycenter=56 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_42_Pre5_G#1_RR2.wav lokey=56 hikey=56 end=552458 loop_mode=loop_continuous loopstart=187957 loopend=552457 pitch_keycenter=56 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_41_Pre5_G#1_RR1.wav lokey=56 hikey=56 end=558563 loop_mode=loop_continuous loopstart=189922 loopend=558562 pitch_keycenter=56 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_42_Pre5_G#1_RR2.wav lokey=56 hikey=56 end=568182 loop_mode=loop_continuous loopstart=193181 loopend=568181 pitch_keycenter=56 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_43_Pre5_A1_RR1.wav lokey=57 hikey=57 end=559181 loop_mode=loop_continuous loopstart=190540 loopend=559180 pitch_keycenter=57 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_44_Pre5_A1_RR2.wav lokey=57 hikey=57 end=568977 loop_mode=loop_continuous loopstart=195728 loopend=568976 pitch_keycenter=57 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_43_Pre5_A1_RR1.wav lokey=57 hikey=57 end=552135 loop_mode=loop_continuous loopstart=187634 loopend=552134 pitch_keycenter=57 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_44_Pre5_A1_RR2.wav lokey=57 hikey=57 end=558452 loop_mode=loop_continuous loopstart=189811 loopend=558451 pitch_keycenter=57 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_45_Pre5_A#1_RR1.wav lokey=58 hikey=58 end=551956 loop_mode=loop_continuous loopstart=187455 loopend=551955 pitch_keycenter=58 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_46_Pre5_A#1_RR2.wav lokey=58 hikey=58 end=558732 loop_mode=loop_continuous loopstart=190091 loopend=558731 pitch_keycenter=58 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_45_Pre5_A#1_RR1.wav lokey=58 hikey=58 end=552611 loop_mode=loop_continuous loopstart=188110 loopend=552610 pitch_keycenter=58 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_46_Pre5_A#1_RR2.wav lokey=58 hikey=58 end=565368 loop_mode=loop_continuous loopstart=192119 loopend=565367 pitch_keycenter=58 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_47_Pre5_B1_RR1.wav lokey=59 hikey=59 end=564951 loop_mode=loop_continuous loopstart=191702 loopend=564950 pitch_keycenter=59 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_48_Pre5_B1_RR2.wav lokey=59 hikey=59 end=567682 loop_mode=loop_continuous loopstart=194433 loopend=567681 pitch_keycenter=59 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\P_47_Pre5_B1_RR1.wav lokey=59 hikey=59 end=545179 loop_mode=loop_continuous loopstart=185178 loopend=545178 pitch_keycenter=59 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\P_48_Pre5_B1_RR2.wav lokey=59 hikey=59 end=552695 loop_mode=loop_continuous loopstart=188194 loopend=552694 pitch_keycenter=59 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_49_Pre5_C2_RR1.wav lokey=60 hikey=60 end=552024 loop_mode=loop_continuous loopstart=187523 loopend=552023 pitch_keycenter=60 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_50_Pre5_C2_RR2.wav lokey=60 hikey=60 end=567887 loop_mode=loop_continuous loopstart=192886 loopend=567886 pitch_keycenter=60 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_51_Pre5_C#2_RR1.wav lokey=61 hikey=61 end=552220 loop_mode=loop_continuous loopstart=187719 loopend=552219 pitch_keycenter=61 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_52_Pre5_C#2_RR2.wav lokey=61 hikey=61 end=559265 loop_mode=loop_continuous loopstart=190624 loopend=559264 pitch_keycenter=61 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_53_Pre5_D2_RR1.wav lokey=62 hikey=62 end=564212 loop_mode=loop_continuous loopstart=190963 loopend=564211 pitch_keycenter=62 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_54_Pre5_D2_RR2.wav lokey=62 hikey=62 end=557411 loop_mode=loop_continuous loopstart=188770 loopend=557410 pitch_keycenter=62 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_55_Pre5_D#2_RR1.wav lokey=63 hikey=63 end=564370 loop_mode=loop_continuous loopstart=191121 loopend=564369 pitch_keycenter=63 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_56_Pre5_D#2_RR2.wav lokey=63 hikey=63 end=565685 loop_mode=loop_continuous loopstart=192436 loopend=565684 pitch_keycenter=63 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_57_Pre5_E2_RR1.wav lokey=64 hikey=64 end=567945 loop_mode=loop_continuous loopstart=192944 loopend=567944 pitch_keycenter=64 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_58_Pre5_E2_RR2.wav lokey=64 hikey=64 end=558272 loop_mode=loop_continuous loopstart=189631 loopend=558271 pitch_keycenter=64 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_59_Pre5_F2_RR1.wav lokey=65 hikey=65 end=557189 loop_mode=loop_continuous loopstart=188548 loopend=557188 pitch_keycenter=65 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_60_Pre5_F2_RR2.wav lokey=65 hikey=65 end=567022 loop_mode=loop_continuous loopstart=193773 loopend=567021 pitch_keycenter=65 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_61_Pre5_F#2_RR1.wav lokey=66 hikey=66 end=564048 loop_mode=loop_continuous loopstart=190799 loopend=564047 pitch_keycenter=66 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_62_Pre5_F#2_RR2.wav lokey=66 hikey=66 end=568045 loop_mode=loop_continuous loopstart=193044 loopend=568044 pitch_keycenter=66 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_63_Pre5_G2_RR1.wav lokey=67 hikey=67 end=558130 loop_mode=loop_continuous loopstart=189489 loopend=558129 pitch_keycenter=67 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_64_Pre5_G2_RR2.wav lokey=67 hikey=67 end=567075 loop_mode=loop_continuous loopstart=193826 loopend=567074 pitch_keycenter=67 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_65_Pre5_G#2_RR1.wav lokey=68 hikey=68 end=564428 loop_mode=loop_continuous loopstart=191179 loopend=564427 pitch_keycenter=68 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_66_Pre5_G#2_RR2.wav lokey=68 hikey=68 end=567117 loop_mode=loop_continuous loopstart=193868 loopend=567116 pitch_keycenter=68 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_67_Pre5_A2_RR1.wav lokey=69 hikey=69 end=565590 loop_mode=loop_continuous loopstart=192341 loopend=565589 pitch_keycenter=69 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_68_Pre5_A2_RR2.wav lokey=69 hikey=69 end=580611 loop_mode=loop_continuous loopstart=196610 loopend=580610 pitch_keycenter=69 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_69_Pre5_A#2_RR1.wav lokey=70 hikey=70 end=706236 loop_mode=loop_continuous loopstart=239675 loopend=706235 pitch_keycenter=70 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_70_Pre5_A#2_RR2.wav lokey=70 hikey=70 end=564328 loop_mode=loop_continuous loopstart=191079 loopend=564327 pitch_keycenter=70 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_71_Pre5_B2_RR1.wav lokey=71 hikey=71 end=552833 loop_mode=loop_continuous loopstart=188332 loopend=552832 pitch_keycenter=71 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_72_Pre5_B2_RR2.wav lokey=71 hikey=71 end=564053 loop_mode=loop_continuous loopstart=190804 loopend=564052 pitch_keycenter=71 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_73_Pre5_C3_RR1.wav lokey=72 hikey=72 end=558632 loop_mode=loop_continuous loopstart=189991 loopend=558631 pitch_keycenter=72 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_74_Pre5_C3_RR2.wav lokey=72 hikey=72 end=545126 loop_mode=loop_continuous loopstart=185125 loopend=545125 pitch_keycenter=72 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_75_Pre5_C#3_RR1.wav lokey=73 hikey=73 end=557216 loop_mode=loop_continuous loopstart=188575 loopend=557215 pitch_keycenter=73 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_76_Pre5_C#3_RR2.wav lokey=73 hikey=73 end=537492 loop_mode=loop_continuous loopstart=183197 loopend=537491 pitch_keycenter=73 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_77_Pre5_D3_RR1.wav lokey=74 hikey=74 end=557971 loop_mode=loop_continuous loopstart=189330 loopend=557970 pitch_keycenter=74 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_78_Pre5_D3_RR2.wav lokey=74 hikey=74 end=552542 loop_mode=loop_continuous loopstart=188041 loopend=552541 pitch_keycenter=74 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_79_Pre5_D#3_RR1.wav lokey=75 hikey=75 end=551982 loop_mode=loop_continuous loopstart=187481 loopend=551981 pitch_keycenter=75 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_80_Pre5_D#3_RR2.wav lokey=75 hikey=75 end=552051 loop_mode=loop_continuous loopstart=187550 loopend=552050 pitch_keycenter=75 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_81_Pre5_E3_RR1.wav lokey=76 hikey=76 end=558235 loop_mode=loop_continuous loopstart=189594 loopend=558234 pitch_keycenter=76 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_82_Pre5_E3_RR2.wav lokey=76 hikey=76 end=565828 loop_mode=loop_continuous loopstart=192579 loopend=565827 pitch_keycenter=76 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_83_Pre5_F3_RR1.wav lokey=77 hikey=77 end=557279 loop_mode=loop_continuous loopstart=188638 loopend=557278 pitch_keycenter=77 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_84_Pre5_F3_RR2.wav lokey=77 hikey=77 end=545195 loop_mode=loop_continuous loopstart=185194 loopend=545194 pitch_keycenter=77 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_85_Pre5_F#3_RR1.wav lokey=78 hikey=78 end=559345 loop_mode=loop_continuous loopstart=190704 loopend=559344 pitch_keycenter=78 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_86_Pre5_F#3_RR2.wav lokey=78 hikey=78 end=565511 loop_mode=loop_continuous loopstart=192262 loopend=565510 pitch_keycenter=78 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_87_Pre5_G3_RR1.wav lokey=79 hikey=79 end=552806 loop_mode=loop_continuous loopstart=188305 loopend=552805 pitch_keycenter=79 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_88_Pre5_G3_RR2.wav lokey=79 hikey=79 end=545881 loop_mode=loop_continuous loopstart=185880 loopend=545880 pitch_keycenter=79 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_89_Pre5_G#3_RR1.wav lokey=80 hikey=80 end=545417 loop_mode=loop_continuous loopstart=185416 loopend=545416 pitch_keycenter=80 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_90_Pre5_G#3_RR2.wav lokey=80 hikey=80 end=551158 loop_mode=loop_continuous loopstart=186657 loopend=551157 pitch_keycenter=80 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_91_Pre5_A3_RR1.wav lokey=81 hikey=81 end=557702 loop_mode=loop_continuous loopstart=189061 loopend=557701 pitch_keycenter=81 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_92_Pre5_A3_RR2.wav lokey=81 hikey=81 end=552606 loop_mode=loop_continuous loopstart=188105 loopend=552605 pitch_keycenter=81 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_93_Pre5_A#3_RR1.wav lokey=82 hikey=82 end=564803 loop_mode=loop_continuous loopstart=191554 loopend=564802 pitch_keycenter=82 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_94_Pre5_A#3_RR2.wav lokey=82 hikey=82 end=559345 loop_mode=loop_continuous loopstart=190704 loopend=559344 pitch_keycenter=82 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_95_Pre5_B3_RR1.wav lokey=83 hikey=83 end=564893 loop_mode=loop_continuous loopstart=191644 loopend=564892 pitch_keycenter=83 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_96_Pre5_B3_RR2.wav lokey=83 hikey=83 end=568515 loop_mode=loop_continuous loopstart=193514 loopend=568514 pitch_keycenter=83 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_97_Pre5_C4_RR1.wav lokey=84 hikey=84 end=537973 loop_mode=loop_continuous loopstart=183678 loopend=537972 pitch_keycenter=84 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_98_Pre5_C4_RR2.wav lokey=84 hikey=84 end=552479 loop_mode=loop_continuous loopstart=187978 loopend=552478 pitch_keycenter=84 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_99_Pre5_C#4_RR1.wav lokey=85 hikey=85 end=551723 loop_mode=loop_continuous loopstart=187222 loopend=551722 pitch_keycenter=85 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_100_Pre5_C#4_RR2.wav lokey=85 hikey=85 end=545121 loop_mode=loop_continuous loopstart=185120 loopend=545120 pitch_keycenter=85 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_101_Pre5_D4_RR1.wav lokey=86 hikey=86 end=682951 loop_mode=loop_continuous loopstart=232950 loopend=682950 pitch_keycenter=86 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_102_Pre5_D4_RR2.wav lokey=86 hikey=86 end=524207 loop_mode=loop_continuous loopstart=178606 loopend=524206 pitch_keycenter=86 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_103_Pre5_D#4_RR1.wav lokey=87 hikey=87 end=545876 loop_mode=loop_continuous loopstart=185875 loopend=545875 pitch_keycenter=87 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_104_Pre5_D#4_RR2.wav lokey=87 hikey=87 end=537492 loop_mode=loop_continuous loopstart=183197 loopend=537491 pitch_keycenter=87 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_105_Pre5_E4_RR1.wav lokey=88 hikey=88 end=536884 loop_mode=loop_continuous loopstart=182589 loopend=536883 pitch_keycenter=88 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_106_Pre5_E4_RR2.wav lokey=88 hikey=88 end=545781 loop_mode=loop_continuous loopstart=185780 loopend=545780 pitch_keycenter=88 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_107_Pre5_F4_RR1.wav lokey=89 hikey=89 end=551972 loop_mode=loop_continuous loopstart=187471 loopend=551971 pitch_keycenter=89 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_108_Pre5_F4_RR2.wav lokey=89 hikey=89 end=544566 loop_mode=loop_continuous loopstart=184565 loopend=544565 pitch_keycenter=89 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_109_Pre5_F#4_RR1.wav lokey=90 hikey=90 end=558827 loop_mode=loop_continuous loopstart=190186 loopend=558826 pitch_keycenter=90 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_110_Pre5_F#4_RR2.wav lokey=90 hikey=90 end=557659 loop_mode=loop_continuous loopstart=189018 loopend=557658 pitch_keycenter=90 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_111_Pre5_G4_RR1.wav lokey=91 hikey=91 end=552479 loop_mode=loop_continuous loopstart=187978 loopend=552478 pitch_keycenter=91 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_112_Pre5_G4_RR2.wav lokey=91 hikey=91 end=552880 loop_mode=loop_continuous loopstart=188379 loopend=552879 pitch_keycenter=91 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_113_Pre5_G#4_RR1.wav lokey=92 hikey=92 end=551913 loop_mode=loop_continuous loopstart=187412 loopend=551912 pitch_keycenter=92 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_114_Pre5_G#4_RR2.wav lokey=92 hikey=92 end=537006 loop_mode=loop_continuous loopstart=182711 loopend=537005 pitch_keycenter=92 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_115_Pre5_A4_RR1.wav lokey=93 hikey=93 end=552880 loop_mode=loop_continuous loopstart=188379 loopend=552879 pitch_keycenter=93 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_116_Pre5_A4_RR2.wav lokey=93 hikey=93 end=551074 loop_mode=loop_continuous loopstart=186573 loopend=551073 pitch_keycenter=93 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_117_Pre5_A#4_RR1.wav lokey=94 hikey=94 end=538268 loop_mode=loop_continuous loopstart=183973 loopend=538267 pitch_keycenter=94 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_118_Pre5_A#4_RR2.wav lokey=94 hikey=94 end=545121 loop_mode=loop_continuous loopstart=185120 loopend=545120 pitch_keycenter=94 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_119_Pre5_B4_RR1.wav lokey=95 hikey=95 end=545543 loop_mode=loop_continuous loopstart=185542 loopend=545542 pitch_keycenter=95 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_120_Pre5_B4_RR2.wav lokey=95 hikey=95 end=545168 loop_mode=loop_continuous loopstart=185167 loopend=545167 pitch_keycenter=95 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=96 hikey=96 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=96 hikey=96 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=97 hikey=97 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=97 hikey=97 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=98 hikey=98 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=98 hikey=98 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=99 hikey=99 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=99 hikey=99 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=100 hikey=100 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=100 hikey=100 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=101 hikey=101 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=101 hikey=101 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=102 hikey=102 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=102 hikey=102 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=103 hikey=103 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=103 hikey=103 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=104 hikey=104 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=104 hikey=104 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=105 hikey=105 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=105 hikey=105 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=106 hikey=106 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=106 hikey=106 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=107 hikey=107 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=107 hikey=107 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=108 hikey=108 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=108 hikey=108 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=109 hikey=109 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=109 hikey=109 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=110 hikey=110 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=110 hikey=110 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=111 hikey=111 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=111 hikey=111 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=112 hikey=112 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=112 hikey=112 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=113 hikey=113 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=113 hikey=113 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=114 hikey=114 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=114 hikey=114 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=115 hikey=115 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=115 hikey=115 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=116 hikey=116 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=116 hikey=116 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=117 hikey=117 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=117 hikey=117 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=118 hikey=118 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=118 hikey=118 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=119 hikey=119 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=119 hikey=119 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=120 hikey=120 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=120 hikey=120 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=121 hikey=121 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=121 hikey=121 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=122 hikey=122 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=122 hikey=122 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=123 hikey=123 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=123 hikey=123 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=124 hikey=124 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=124 hikey=124 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=125 hikey=125 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=125 hikey=125 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=126 hikey=126 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=126 hikey=126 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
+
+<group> seq_length=2
+<region> sample=..\..\Samples\PRE5\K_121_Pre5_C5_RR1.wav lokey=127 hikey=127 end=537803 loop_mode=loop_continuous loopstart=183508 loopend=537802 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1
+<region> sample=..\..\Samples\PRE5\K_122_Pre5_C5_RR2.wav lokey=127 hikey=127 end=564613 loop_mode=loop_continuous loopstart=191364 loopend=564612 pitch_keycenter=96 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=2
