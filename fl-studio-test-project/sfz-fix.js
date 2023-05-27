@@ -1,7 +1,6 @@
 /**
- * Fix SFZ
- *
- * Fix SFZ preset files for TownGallOrgan
+ * Generate fixed SFZ preset files for TownHallOrgan
+ * Pedal and Keys ranks are crossfaded into a single rank.
  *
  * Usage:
  *    node sfz-fix.js <sfz file> > <output file>
