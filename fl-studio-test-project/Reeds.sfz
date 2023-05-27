@@ -1,4 +1,4 @@
-<global> tune=-11
+<global> tune=-11 amp_velcurve_1=1 // All notes play max velocity
 
 <group> seq_length=2
 <region> sample=..\..\Samples\PRE6\K_1_Pre6_C0_RR1.wav lokey=36 hikey=36 end=539300 loop_mode=loop_continuous loopstart=182410 loopend=539299 pitch_keycenter=36 bend_up=200 bend_down=-200 amp_veltrack=100 ampeg_release=0.2 pitchlfo_freq=5 seq_position=1

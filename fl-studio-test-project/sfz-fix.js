@@ -43,7 +43,7 @@ function main() {
 			}
 
 			// \\K_120_Pre1_B4_RR2.wav
-			const [, keyboard, index, preset, note, rr] = regionProps.sample.match(/\\([^_\\]+)_([^_]+)_([^_]+)_([^_]+)_([^\.]+)/)
+			const [, keyboard, index, preset, note, rr] = regionProps.sample.match(/\\([^_\\]+)_([^_]+)_([^_]+)_([^_]+)_([^\.]+)/);
 			let map;
 
 			// Remove the bad guy that makes Sforzando not happy
@@ -105,7 +105,7 @@ function main() {
 		a[0].pitch_keycenter - b[0].pitch_keycenter
 	);
 
-	let sfz = `<global> tune=${MASTER_TUNE}\r\n`;
+	let sfz = `<global> tune=${MASTER_TUNE} amp_velcurve_1=1 // All notes play max velocity\r\n`;
 
 	for (const group of regions) {
 		sfz += `\r\n<group> seq_length=${group.length}\r\n`;
