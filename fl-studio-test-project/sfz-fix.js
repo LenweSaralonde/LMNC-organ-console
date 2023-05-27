@@ -79,17 +79,22 @@ function main() {
 				map = keys;
 			}
 
+			// Maximum velocity
+			regionProps.amp_veltrack = 100;
+
 			// Insert one region per key
 			for (let key = regionProps.lokey; key <= regionProps.hikey; key++) {
 				// Crossfade between pedals and keys
 				let volume = 1;
-				if (CROSSFADE_FROM <= regionProps.key && regionProps.key <= CROSSFADE_TO) {
-					volume = (regionProps.key - CROSSFADE_FROM) / (CROSSFADE_TO - CROSSFADE_FROM);
+				if (CROSSFADE_FROM <= key && key <= CROSSFADE_TO) {
+					const t = 2 * (key - CROSSFADE_FROM) / (CROSSFADE_TO - CROSSFADE_FROM) - 1;
 					if (keyboard === 'P') {
-						volume = 1 - volume;
+						volume = Math.sqrt(.5 * (1 - t));
+					} else {
+						volume = Math.sqrt(.5 * (1 + t));
 					}
 				}
-				regionProps.amp_veltrack = Math.floor(volume * 100 * 1000000) / 1000000;
+				regionProps.amplitude = Math.floor(volume * 100 * 1000000) / 1000000;
 
 				// Insert region in its map
 				if (!map.has(key)) {
@@ -102,7 +107,7 @@ function main() {
 
 	// Generate SFZ
 	let regions = [...keys.values(), ...pedals.values()].sort((a, b) =>
-		a[0].pitch_keycenter - b[0].pitch_keycenter
+		a[0].lokey - b[0].lokey
 	);
 
 	let sfz = `<global> tune=${MASTER_TUNE} amp_velcurve_1=1 // All notes play max velocity\r\n`;
