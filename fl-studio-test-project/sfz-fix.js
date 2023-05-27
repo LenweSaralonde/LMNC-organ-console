@@ -4,7 +4,7 @@
  * Fix SFZ preset files for TownGallOrgan
  *
  * Usage:
- *    node sfz-fix.js <sfz file> [<transpose>]
+ *    node sfz-fix.js <sfz file> > <output file>
  */
 
 'use strict'
@@ -22,11 +22,9 @@ const CROSSFADE_TO = 60;
  */
 function main() {
 	if (process.argv[2] === undefined) {
-		process.stderr.write("Usage: node sfz-fix.js <sfz file> [<transpose>]\n");
+		process.stderr.write("Usage: node sfz-fix.js <sfz file> > <output file>\n");
 		process.exit(1);
 	}
-
-	const transpose = parseInt(process.argv[3] ?? 0, 10);
 
 	// Load source SFZ file
 	const sourceSfz = fs.readFileSync(process.argv[2]).toString().replace(/\r/g, '').split('\n');
@@ -108,7 +106,7 @@ function main() {
 		a[0].pitch_keycenter - b[0].pitch_keycenter
 	);
 
-	let sfz = `<global> tune=${MASTER_TUNE} transpose=${transpose}\r\n`;
+	let sfz = `<global> tune=${MASTER_TUNE}\r\n`;
 
 	for (const group of regions) {
 		sfz += `\r\n<group> seq_length=${group.length}\r\n`;

@@ -20,4 +20,4 @@ The Leeds Town Hall Organ soundfont files have bugs and don't properly work in S
 * `node sfz-fix.js "Preset 1.sfz" > Flutes.sfz`
 * `node sfz-fix.js "Preset 2.sfz" > Strings.sfz`
 * `node sfz-fix.js "Preset 5.sfz" > Principal.sfz`
-* `node sfz-fix.js "Preset 6.sfz" 12 > Reeds.sfz`
+* `node sfz-fix.js "Preset 6.sfz" > Reeds.sfz`
